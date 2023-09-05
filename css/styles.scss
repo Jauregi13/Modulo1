@@ -16,7 +16,6 @@ body {
    height: 70px;
 
    &--shadow {
-      border-bottom: 1px solid #000000; 
       box-shadow: 0 0 5px #000000;
    }
 
@@ -29,18 +28,21 @@ body {
       margin-left: 25px;
 
       &--blue {
-         color: $secondary_color;
+         color: $primary_color;
       }
    }
 
    &__menu {
       display: inline-block;
+      position: absolute;
+      font-size: 25px;
+      top: 21px;
+      right: 50px;
+
+      &--blue {
+         color: $secondary_color;
+      }
 
    
    }
-
-   
-
-
-
 }

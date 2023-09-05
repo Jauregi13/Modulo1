@@ -13,8 +13,7 @@ body {
   height: 70px;
 }
 .header--shadow {
-  border-bottom: 1px solid #000000;
-  box-shadow: 0 0 3px #000000;
+  box-shadow: 0 0 5px #000000;
 }
 .header__logo {
   display: inline-block;
@@ -25,10 +24,17 @@ body {
   margin-left: 25px;
 }
 .header__logo--blue {
-  color: #07ACE6;
+  color: #08A6E4;
 }
 .header__menu {
   display: inline-block;
+  position: absolute;
+  font-size: 25px;
+  top: 21px;
+  right: 50px;
+}
+.header__menu--blue {
+  color: #07ACE6;
 }
 
 /*# sourceMappingURL=styles.css.map */
