@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Raleway;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
 .header__logo {
   display: inline-block;
   font-size: 32px;
-  font-family: Raleway;
   font-weight: 300;
   margin-top: 17px;
   margin-left: 25px;
@@ -49,7 +49,6 @@ body {
 }
 .sectionIntroduction__header {
   font-size: 35px;
-  font-family: Raleway;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -80,6 +79,7 @@ body {
   width: 100%;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 .section2__image {
   height: auto;
@@ -88,10 +88,33 @@ body {
 }
 .section2__text {
   font-size: 30px;
-  font-family: Raleway;
   font-weight: 300;
   margin: 0 auto;
   width: 60%;
+}
+
+.section3 {
+  display: block;
+  width: 100%;
+}
+.section3__column1 {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+.section3__column1__img {
+  margin-bottom: 14px;
+}
+.section3__column1__number {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  margin-bottom: 19px;
+}
+.section3__column1__text {
+  font-size: 17px;
+  font-weight: 400;
+  color: #A5A5A5;
 }
 
 /*# sourceMappingURL=styles.css.map */
