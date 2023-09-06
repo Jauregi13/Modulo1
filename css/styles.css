@@ -97,21 +97,41 @@ body {
   display: block;
   width: 100%;
 }
-.section3__column1 {
+.section3__column1, .section3__column2, .section3__column3 {
   width: 40%;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 25px;
 }
-.section3__column1__img {
+.section3__column1__img, .section3__column2__img, .section3__column3__img {
+  position: relative;
   margin-bottom: 14px;
+  left: 15px;
 }
-.section3__column1__number {
+.section3__column1__img--move, .section3__column2__img--move, .section3__column3__img--move {
+  left: 32px;
+}
+.section3__column1__img--move2, .section3__column2__img--move2, .section3__column3__img--move2 {
+  left: 26px;
+}
+.section3__column1__img2, .section3__column2__img2, .section3__column3__img2 {
+  position: relative;
+  bottom: 23px;
+  right: 22px;
+}
+.section3__column1__img2--move, .section3__column2__img2--move, .section3__column3__img2--move {
+  right: 15px;
+}
+.section3__column1__img2--move2, .section3__column2__img2--move2, .section3__column3__img2--move2 {
+  right: 10px;
+}
+.section3__column1__number, .section3__column2__number, .section3__column3__number {
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 6px;
   margin-bottom: 19px;
 }
-.section3__column1__text {
+.section3__column1__text, .section3__column2__text, .section3__column3__text {
   font-size: 17px;
   font-weight: 400;
   color: #A5A5A5;

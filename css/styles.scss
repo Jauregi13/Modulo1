@@ -117,13 +117,40 @@ body {
    display: block;
    width: 100%;
 
-   &__column1 {
+   &__column1, &__column2, &__column3 {
       width: 40%;
       margin: 0 auto;
       text-align: center;
+      margin-bottom: 25px;
 
       &__img {
+         position: relative;
          margin-bottom: 14px;
+         left: 15px;
+
+         &--move {
+            left: 32px;
+         }
+
+         &--move2 {
+            left: 26px;
+         }
+
+         
+      }
+
+      &__img2 {
+         position: relative;
+         bottom: 23px;
+         right: 22px;
+
+         &--move {
+            right: 15px;
+         }
+
+         &--move2 {
+            right: 10px;
+         }
       }
 
       &__number {
