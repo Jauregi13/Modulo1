@@ -37,8 +37,8 @@ body {
       display: inline-block;
       position: absolute;
       font-size: 25px;
-      top: 21px;
-      right: 50px;
+      top: 0.8em;
+      right: 2em;
 
       &--blue {
          color: $secondary_color;
@@ -165,5 +165,66 @@ body {
          font-weight: 400;
          color: #A5A5A5;
       }
+   }
+}
+
+.section4 {
+   display: block;
+   width: 100%;
+   height: auto;
+   background-color: #F7F7F7;
+   padding-top: 42px;
+   padding-bottom: 42px;
+
+   &__column1, &__column2, &__column3 {
+      width: 80%;
+      background-color: #FFFFFF;
+      margin: 0 auto;
+      padding-top: 37px;
+      margin-bottom: 41px;
+      border: 1px solid #E8E9ED;
+      border-radius: 5px;
+
+      &__images {
+         position: relative;
+         text-align: center;
+         margin-bottom: 27px;
+
+         &__image1 {
+            position: relative;
+            z-index: 2;
+         }
+ 
+         &__image2 {
+            position: absolute;
+            z-index: 1;
+            right: 3em;
+            bottom: 1.5em;
+         }
+      }
+
+      &__text {
+         width: 85%;
+         margin-left: 22px;
+
+         &__title {
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+         }
+
+         &__parag {
+            font-family: $font_secondary;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 30px;
+         }
+      }
+
+      
+
+
    }
 }

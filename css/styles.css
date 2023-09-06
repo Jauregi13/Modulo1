@@ -30,8 +30,8 @@ body {
   display: inline-block;
   position: absolute;
   font-size: 25px;
-  top: 21px;
-  right: 50px;
+  top: 0.8em;
+  right: 2em;
 }
 .header__menu--blue {
   color: #07ACE6;
@@ -135,6 +135,56 @@ body {
   font-size: 17px;
   font-weight: 400;
   color: #A5A5A5;
+}
+
+.section4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #F7F7F7;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+.section4__column1, .section4__column2, .section4__column3 {
+  width: 80%;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  padding-top: 37px;
+  margin-bottom: 41px;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+}
+.section4__column1__images, .section4__column2__images, .section4__column3__images {
+  position: relative;
+  text-align: center;
+  margin-bottom: 27px;
+}
+.section4__column1__images__image1, .section4__column2__images__image1, .section4__column3__images__image1 {
+  position: relative;
+  z-index: 2;
+}
+.section4__column1__images__image2, .section4__column2__images__image2, .section4__column3__images__image2 {
+  position: absolute;
+  z-index: 1;
+  right: 3em;
+  bottom: 1.5em;
+}
+.section4__column1__text, .section4__column2__text, .section4__column3__text {
+  width: 85%;
+  margin-left: 22px;
+}
+.section4__column1__text__title, .section4__column2__text__title, .section4__column3__text__title {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+}
+.section4__column1__text__parag, .section4__column2__text__parag, .section4__column3__text__parag {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
