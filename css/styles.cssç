@@ -200,13 +200,6 @@ body {
 }
 .section4__column1__green, .section4__column2__green, .section4__column3__green {
   background-color: #55DFB4;
-  position: relative;
-  border: 1px solid #E8E9ED;
-  border-radius: 5px;
-}
-.section4__column1__green__image, .section4__column2__green__image, .section4__column3__green__image {
-  position: relative;
-  top: 2em;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css%C3%A7.map */
