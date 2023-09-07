@@ -255,12 +255,117 @@ body {
 .sectionPrices {
 
    padding-top: 53px;
-   margin: 0 auto;
-   text-align: center;
+   
+   
 
    &__title {
+      text-align: center;
       font-size: 36px;
       line-height: 42px;
       margin-bottom: 14px;
    }
+
+   &__price {
+      width: 75%;
+      border-radius: 18px;
+      margin: 0 auto;
+      margin-bottom: 55px;
+
+      &--red {
+         border: 1px solid #FB3B64;
+      }
+
+      &--blue {
+         border: 1px solid #07ACE6;
+      }
+
+      &--green {
+         border: 1px solid #55DFB4;
+      }
+
+      &__type {
+         display: inline-block;
+         position: relative;
+         bottom: 3em;
+         width: 50%;
+         text-align: center;
+
+         &__text {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #13253B;
+         }
+
+         &__number {
+            font-size: 46px;
+            font-weight: 300;
+            font-family: $font_secondary;
+            line-height: 64px;
+            color: #FB3B64;
+         }
+      }
+
+      &__features {
+         margin-top: 25px;
+         display: inline-block;
+
+         &__feature1, &__feature2, &__feature3, &__feature4, &__feature5 {
+            margin-bottom: 20px;
+            display: block;
+
+            &__checkbox {
+               appearance: none;
+	            -webkit-appearance: none;
+	            -moz-appearance: none;
+               border-radius: 2px;
+               width: 11px;
+               height: 11px;
+
+               &--green:checked {
+                  border: 1px solid #55DFB4;
+                  
+               }
+
+               &--red:checked {
+                  border: 1px solid #FB3B64;
+               }
+            }
+
+            &__label {
+               margin-left: 10px;
+            }
+         }
+      }
+
+      &__button {
+         width: 150px;
+         height: 50px;
+         display: block;
+         margin: 0 auto;
+         position: relative;
+         top: 2em;
+         border-radius: 23px;
+         font-size: 13px;
+         font-family: $font_secondary;
+         font-weight: 700;
+         line-height: 18px;
+         color: #FFFFFF;
+
+         &--red {
+            background-color: #FB3B64;
+         }
+
+         &--blue {
+            background-color: #07ACE6;
+         }
+
+         &--green {
+            background-color: #55DFB4;
+         }
+
+      }
+   }
+
+   
 }
