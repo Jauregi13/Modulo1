@@ -208,5 +208,8 @@ body {
   position: relative;
   top: 2em;
 }
+.section4__column1--bottomChange, .section4__column2--bottomChange, .section4__column3--bottomChange {
+  margin-bottom: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */
