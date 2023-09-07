@@ -8,6 +8,7 @@ $secondary_color: #07ACE6;
    margin: 0;
    padding: 0;
    font-family: $font_primary;
+   font-weight: 400;
 }
 body {
    min-width: 320px;
@@ -62,14 +63,12 @@ body {
 
    &__header {
       font-size: 35px;
-      font-weight: 400;
       margin-bottom: 20px;
    }
 
    &__paragraph {
       font-size: 16px;
       font-family: $font_secondary;
-      font-weight: 400;
       margin-bottom: 28px;
       
    }
@@ -162,7 +161,6 @@ body {
 
       &__text {
          font-size: 17px;
-         font-weight: 400;
          color: #A5A5A5;
       }
    }
@@ -219,14 +217,12 @@ body {
 
          &__title {
             margin-bottom: 10px;
-            font-weight: 400;
             font-size: 30px;
             line-height: 35px;
          }
 
          &__parag {
             font-family: $font_secondary;
-            font-weight: 400;
             font-size: 14px;
             line-height: 21px;
             margin-bottom: 30px;
@@ -253,5 +249,18 @@ body {
       
 
 
+   }
+}
+
+.sectionPrices {
+
+   padding-top: 53px;
+   margin: 0 auto;
+   text-align: center;
+
+   &__title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 14px;
    }
 }

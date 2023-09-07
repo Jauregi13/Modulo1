@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: Raleway;
+  font-weight: 400;
 }
 
 body {
@@ -49,13 +50,11 @@ body {
 }
 .sectionIntroduction__header {
   font-size: 35px;
-  font-weight: 400;
   margin-bottom: 20px;
 }
 .sectionIntroduction__paragraph {
   font-size: 16px;
   font-family: Open Sans;
-  font-weight: 400;
   margin-bottom: 28px;
 }
 .sectionIntroduction__button {
@@ -133,7 +132,6 @@ body {
 }
 .section3__column1__text, .section3__column2__text, .section3__column3__text {
   font-size: 17px;
-  font-weight: 400;
   color: #A5A5A5;
 }
 
@@ -183,13 +181,11 @@ body {
 }
 .section4__column1__text__title, .section4__column2__text__title, .section4__column3__text__title {
   margin-bottom: 10px;
-  font-weight: 400;
   font-size: 30px;
   line-height: 35px;
 }
 .section4__column1__text__parag, .section4__column2__text__parag, .section4__column3__text__parag {
   font-family: Open Sans;
-  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 30px;
@@ -207,6 +203,17 @@ body {
 .section4__column1__green__image, .section4__column2__green__image, .section4__column3__green__image {
   position: relative;
   top: 2em;
+}
+
+.sectionPrices {
+  padding-top: 53px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sectionPrices__title {
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */
