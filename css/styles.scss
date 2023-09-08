@@ -288,6 +288,7 @@ body {
 
       &--green {
          border: 1px solid $green_color;
+         margin-bottom: 78px;
       }
 
       &__type {
@@ -395,6 +396,53 @@ body {
          }
 
       }
+   }
+
+   
+}
+
+.sectionContact {
+
+   width: 80%;
+   margin: 0 auto;
+
+   &__title {
+      font-size: 40px;
+      line-height: 47px;
+   }
+
+   &__text {
+      font-family: $font_secondary;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 38px;
+   }
+
+   &__info {
+
+      margin-bottom: 53px;
+
+      &__email, &__phone {
+         display: block;
+         margin-bottom: 10px;
+   
+         &__icon {
+            display: inline-block;
+            margin-right: 7px;
+         }
+   
+         &__text {
+            display: inline-block;
+            font-size: 16px;
+            color: #A5A5A5;
+            font-weight: 600;
+            font-family: $font_secondary;
+            line-height: 22px;
+            vertical-align: text-bottom;
+            
+         }
+      }
+
    }
 
    

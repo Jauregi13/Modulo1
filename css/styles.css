@@ -232,6 +232,7 @@ body {
 }
 .sectionPrices__price--green {
   border: 1px solid #55DFB4;
+  margin-bottom: 78px;
 }
 .sectionPrices__price__type {
   display: inline-block;
@@ -319,6 +320,41 @@ body {
 .sectionPrices__price__button--green {
   border: 1px solid #55DFB4;
   background-color: #55DFB4;
+}
+
+.sectionContact {
+  width: 80%;
+  margin: 0 auto;
+}
+.sectionContact__title {
+  font-size: 40px;
+  line-height: 47px;
+}
+.sectionContact__text {
+  font-family: Open Sans;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 38px;
+}
+.sectionContact__info {
+  margin-bottom: 53px;
+}
+.sectionContact__info__email, .sectionContact__info__phone {
+  display: block;
+  margin-bottom: 10px;
+}
+.sectionContact__info__email__icon, .sectionContact__info__phone__icon {
+  display: inline-block;
+  margin-right: 7px;
+}
+.sectionContact__info__email__text, .sectionContact__info__phone__text {
+  display: inline-block;
+  font-size: 16px;
+  color: #A5A5A5;
+  font-weight: 600;
+  font-family: Open Sans;
+  line-height: 22px;
+  vertical-align: text-bottom;
 }
 
 /*# sourceMappingURL=styles.css.map */
