@@ -1,9 +1,11 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Raleway;
   font-weight: 400;
+  font-size: 0;
 }
 
 body {
@@ -247,10 +249,20 @@ body {
   font-weight: 300;
   font-family: Open Sans;
   line-height: 64px;
+}
+.sectionPrices__price__type__number--red {
   color: #FB3B64;
+}
+.sectionPrices__price__type__number--blue {
+  color: #07ACE6;
+}
+.sectionPrices__price__type__number--green {
+  color: #55DFB4;
 }
 .sectionPrices__price__features {
   margin-top: 25px;
+  width: 50%;
+  text-align: center;
   display: inline-block;
 }
 .sectionPrices__price__features__feature1, .sectionPrices__price__features__feature2, .sectionPrices__price__features__feature3, .sectionPrices__price__features__feature4, .sectionPrices__price__features__feature5 {
@@ -265,13 +277,15 @@ body {
   width: 11px;
   height: 11px;
 }
-.sectionPrices__price__features__feature1__checkbox--green:checked, .sectionPrices__price__features__feature2__checkbox--green:checked, .sectionPrices__price__features__feature3__checkbox--green:checked, .sectionPrices__price__features__feature4__checkbox--green:checked, .sectionPrices__price__features__feature5__checkbox--green:checked {
+.sectionPrices__price__features__feature1__checkbox--green:checked + sectionPrices__price__features__feature2__label::before, .sectionPrices__price__features__feature2__checkbox--green:checked + sectionPrices__price__features__feature2__label::before, .sectionPrices__price__features__feature3__checkbox--green:checked + sectionPrices__price__features__feature2__label::before, .sectionPrices__price__features__feature4__checkbox--green:checked + sectionPrices__price__features__feature2__label::before, .sectionPrices__price__features__feature5__checkbox--green:checked + sectionPrices__price__features__feature2__label::before {
+  content: ✔;
   border: 1px solid #55DFB4;
 }
 .sectionPrices__price__features__feature1__checkbox--red:checked, .sectionPrices__price__features__feature2__checkbox--red:checked, .sectionPrices__price__features__feature3__checkbox--red:checked, .sectionPrices__price__features__feature4__checkbox--red:checked, .sectionPrices__price__features__feature5__checkbox--red:checked {
   border: 1px solid #FB3B64;
 }
 .sectionPrices__price__features__feature1__label, .sectionPrices__price__features__feature2__label, .sectionPrices__price__features__feature3__label, .sectionPrices__price__features__feature4__label, .sectionPrices__price__features__feature5__label {
+  font-size: 14px;
   margin-left: 10px;
 }
 .sectionPrices__price__button {
