@@ -297,7 +297,7 @@ body {
          width: 50%;
          text-align: center;
 
-         &__text {
+         &__title {
             font-size: 20px;
             font-weight: 700;
             line-height: 24px;
@@ -323,39 +323,41 @@ body {
                color: $green_color;
             }
          }
+
+         &__text {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            color: #13253B;
+         }
       }
 
       &__features {
          margin-top: 25px;
          width: 50%;
-         text-align: center;
+         text-align: left;
          display: inline-block;
+
+         &__checkMark {
+            background: url('./../img/checkbox.png');
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+         }
+
+         &__crossMark {
+            background: url('./../img/cross.png');
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+         }
 
          &__feature1, &__feature2, &__feature3, &__feature4, &__feature5 {
             margin-bottom: 20px;
             display: block;
 
-            &__checkbox {
-               appearance: none;
-	            -webkit-appearance: none;
-	            -moz-appearance: none;
-               border-radius: 2px;
-               width: 11px;
-               height: 11px;
-               
-
-               &--green:checked + sectionPrices__price__features__feature2__label::before {
-                  content: \2714;
-                  border: 1px solid $green_color;
-                  
-               }
-
-               &--red:checked {
-                  border: 1px solid $red_color;
-               }
-            }
-
             &__label {
+               display: inline-block;
                font-size: 14px;
                margin-left: 10px;
             }
@@ -369,6 +371,7 @@ body {
          margin: 0 auto;
          position: relative;
          top: 2em;
+         
          border-radius: 23px;
          font-size: 13px;
          font-family: $font_secondary;
@@ -377,14 +380,17 @@ body {
          color: #FFFFFF;
 
          &--red {
+            border: 1px solid $red_color;
             background-color: $red_color;
          }
 
          &--blue {
+            border: 1px solid $secondary_color;
             background-color: $secondary_color;
          }
 
          &--green {
+            border: 1px solid $green_color;
             background-color: $green_color;
          }
 
