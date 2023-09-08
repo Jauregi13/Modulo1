@@ -356,5 +356,49 @@ body {
   line-height: 22px;
   vertical-align: text-bottom;
 }
+.sectionContact__form__name, .sectionContact__form__email {
+  margin-bottom: 42px;
+}
+.sectionContact__form__name__text, .sectionContact__form__email__text {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: Open Sans;
+  line-height: 15px;
+  letter-spacing: 3px;
+  color: #08A6E4;
+}
+.sectionContact__form__name__input, .sectionContact__form__email__input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: unset;
+  border-bottom: 1px solid #95989A;
+}
+.sectionContact__form__name--margin-bottom-32, .sectionContact__form__email--margin-bottom-32 {
+  margin-bottom: 32px;
+}
+.sectionContact__protection__check:not(:checked) + .sectionContact__protection__text::before {
+  content: "";
+  appearance: none;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.sectionContact__protection__check:checked + .sectionContact__protection__text::before {
+  content: "\f00c";
+}
+.sectionContact__protection__text {
+  width: 82%;
+  display: inline-block;
+  font-size: 12px;
+  font-family: Open Sans;
+  line-height: 16px;
+}
 
 /*# sourceMappingURL=styles.css.map */
