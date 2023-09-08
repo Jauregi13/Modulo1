@@ -2,12 +2,16 @@ $font_primary: Raleway;
 $font_secondary: Open Sans;
 $primary_color: #08A6E4;
 $secondary_color: #07ACE6;
+$red_color: #FB3B64;
+$green_color: #55DFB4;
 
 * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
    font-family: $font_primary;
+   font-weight: 400;
+   font-size: 0;
 }
 body {
    min-width: 320px;
@@ -62,14 +66,12 @@ body {
 
    &__header {
       font-size: 35px;
-      font-weight: 400;
       margin-bottom: 20px;
    }
 
    &__paragraph {
       font-size: 16px;
       font-family: $font_secondary;
-      font-weight: 400;
       margin-bottom: 28px;
       
    }
@@ -162,7 +164,6 @@ body {
 
       &__text {
          font-size: 17px;
-         font-weight: 400;
          color: #A5A5A5;
       }
    }
@@ -219,14 +220,12 @@ body {
 
          &__title {
             margin-bottom: 10px;
-            font-weight: 400;
             font-size: 30px;
             line-height: 35px;
          }
 
          &__parag {
             font-family: $font_secondary;
-            font-weight: 400;
             font-size: 14px;
             line-height: 21px;
             margin-bottom: 30px;
@@ -239,7 +238,7 @@ body {
       }
 
       &__green {
-         background-color: #55DFB4;
+         background-color: $green_color;
          position: relative;
          border: 1px solid #E8E9ED;
          border-radius: 5px;
@@ -258,4 +257,139 @@ body {
 
 
    }
+}
+
+.sectionPrices {
+
+   padding-top: 53px;
+   
+   
+
+   &__title {
+      text-align: center;
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 14px;
+   }
+
+   &__price {
+      width: 75%;
+      border-radius: 18px;
+      margin: 0 auto;
+      margin-bottom: 55px;
+
+      &--red {
+         border: 1px solid $red_color;
+      }
+
+      &--blue {
+         border: 1px solid $secondary_color;
+      }
+
+      &--green {
+         border: 1px solid $green_color;
+      }
+
+      &__type {
+         display: inline-block;
+         position: relative;
+         bottom: 3em;
+         width: 50%;
+         text-align: center;
+
+         &__text {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #13253B;
+         }
+
+         &__number {
+            font-size: 46px;
+            font-weight: 300;
+            font-family: $font_secondary;
+            line-height: 64px;
+            
+
+            &--red {
+               color: $red_color;
+            }
+
+            &--blue {
+               color: $secondary_color;
+            }
+
+            &--green {
+               color: $green_color;
+            }
+         }
+      }
+
+      &__features {
+         margin-top: 25px;
+         width: 50%;
+         text-align: center;
+         display: inline-block;
+
+         &__feature1, &__feature2, &__feature3, &__feature4, &__feature5 {
+            margin-bottom: 20px;
+            display: block;
+
+            &__checkbox {
+               appearance: none;
+	            -webkit-appearance: none;
+	            -moz-appearance: none;
+               border-radius: 2px;
+               width: 11px;
+               height: 11px;
+               
+
+               &--green:checked + sectionPrices__price__features__feature2__label::before {
+                  content: \2714;
+                  border: 1px solid $green_color;
+                  
+               }
+
+               &--red:checked {
+                  border: 1px solid $red_color;
+               }
+            }
+
+            &__label {
+               font-size: 14px;
+               margin-left: 10px;
+            }
+         }
+      }
+
+      &__button {
+         width: 150px;
+         height: 50px;
+         display: block;
+         margin: 0 auto;
+         position: relative;
+         top: 2em;
+         border-radius: 23px;
+         font-size: 13px;
+         font-family: $font_secondary;
+         font-weight: 700;
+         line-height: 18px;
+         color: #FFFFFF;
+
+         &--red {
+            background-color: $red_color;
+         }
+
+         &--blue {
+            background-color: $secondary_color;
+         }
+
+         &--green {
+            background-color: $green_color;
+         }
+
+      }
+   }
+
+   
 }
