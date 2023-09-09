@@ -537,3 +537,49 @@ body {
 
    
 }
+
+.footer {
+   box-shadow: 0 -5px 40px -20px #000000;
+
+   &__content {
+      width: 50%;
+      display: inline-block;
+      margin-left: 17px;
+      margin-top: 22px;
+      margin-bottom: 22px;
+
+      &__title {
+         font-size: 26px;
+         font-weight: 300;
+         line-height: 30px;
+         color: $primary_color;
+         
+      }
+
+      &__text {
+         font-size: 11px;
+         font-family: $font_secondary;
+         line-height: 15px;
+         color: #A5A5A5;
+      }
+   }
+
+   &__social-media {
+      text-align: end;
+      width: 15%;
+      display: inline-block;
+      position: relative;
+      right: -25px;
+
+      &__facebook {
+         position: absolute;
+         bottom: 0;
+         margin-left: 40px;
+      }
+
+      &__twitter {
+         position: absolute;
+         bottom: 0;
+      }
+   }
+}
