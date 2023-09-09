@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -379,6 +380,9 @@ body {
 .sectionContact__form__name--margin-bottom-32, .sectionContact__form__email--margin-bottom-32 {
   margin-bottom: 32px;
 }
+.sectionContact__protection input[type=checkbox] {
+  display: none;
+}
 .sectionContact__protection__check:not(:checked) + .sectionContact__protection__text::before {
   content: "";
   appearance: none;
@@ -391,7 +395,17 @@ body {
   margin-right: 10px;
 }
 .sectionContact__protection__check:checked + .sectionContact__protection__text::before {
-  content: "\f00c";
+  content: "✓";
+  font-size: 11px;
+  font-family: "FontAwesome";
+  appearance: none;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
 }
 .sectionContact__protection__text {
   width: 82%;
@@ -399,6 +413,23 @@ body {
   font-size: 12px;
   font-family: Open Sans;
   line-height: 16px;
+  margin-bottom: 33px;
+}
+.sectionContact__protection__button {
+  height: 57px;
+  width: 226px;
+  background-color: #08A6E4;
+  color: #FFFFFF;
+  border: 1px solid #08A6E4;
+  border-radius: 35px;
+  font-size: 13px;
+  font-family: Open Sans;
+  font-weight: 700;
+  line-height: 18px;
+  box-shadow: 5px 10px 14px #07ACE6;
+  margin-bottom: 44px;
+  position: relative;
+  left: 8em;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -478,6 +478,10 @@ body {
 
    &__protection {
 
+      input[type=checkbox] {
+         display: none;
+      }
+
       &__check:not(:checked) + &__text::before {
          content: '';
          appearance: none;
@@ -491,7 +495,17 @@ body {
       }
 
       &__check:checked + &__text::before {
-         content: '\f00c';
+         content: '\2713';
+         font-size: 11px;
+         font-family: 'FontAwesome';
+         appearance: none;
+         border: 1px solid #95989A;
+         border-radius: 4px;
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+         vertical-align: top;
+         margin-right: 10px;
       }
 
       &__text {
@@ -500,6 +514,24 @@ body {
          font-size: 12px;
          font-family: $font_secondary;
          line-height: 16px;
+         margin-bottom: 33px;
+      }
+
+      &__button {
+         height: 57px;
+         width: 226px;
+         background-color: $primary_color;
+         color: #FFFFFF;
+         border: 1px solid $primary_color;
+         border-radius: 35px;
+         font-size: 13px;
+         font-family: $font_secondary;
+         font-weight: 700;
+         line-height: 18px;
+         box-shadow: 5px 10px 14px $secondary_color;
+         margin-bottom: 44px;
+         position: relative;
+         left: 8em;
       }
    }
 
