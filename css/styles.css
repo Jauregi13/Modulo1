@@ -14,30 +14,55 @@ body {
 
 .header {
   width: 100%;
-  height: 70px;
 }
 .header--shadow {
   box-shadow: 0 3px 6px #000000;
 }
-.header__logo {
+.header__content {
+  display: block;
+}
+.header__content__logo {
   display: inline-block;
   font-size: 32px;
   font-weight: 300;
   margin-top: 17px;
   margin-left: 25px;
 }
-.header__logo--blue {
+.header__content__logo--blue {
   color: #08A6E4;
 }
-.header__menu {
+.header__content__button-menu {
   display: inline-block;
+}
+.header__content__button-menu__checkbox {
   position: absolute;
-  font-size: 25px;
+  left: -9999px;
+}
+.header__content__button-menu__label {
+  position: absolute;
   top: 0.8em;
   right: 2em;
+  font-size: 25px;
 }
-.header__menu--blue {
+.header__content__button-menu__label--blue {
   color: #07ACE6;
+}
+.header #menu:checked ~ .header__menu {
+  display: block;
+}
+.header__menu {
+  display: none;
+  padding-top: 40px;
+  margin-left: 25px;
+}
+.header__menu__item {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 3px;
+  font-family: Open Sans;
+  list-style: none;
+  margin-bottom: 14px;
 }
 
 .sectionIntroduction {
@@ -157,6 +182,8 @@ body {
 .section4__column1__images, .section4__column2__images, .section4__column3__images {
   position: relative;
   text-align: center;
+  width: 194px;
+  margin: 0 auto;
   margin-bottom: 27px;
 }
 .section4__column1__images__image1, .section4__column2__images__image1, .section4__column3__images__image1 {
@@ -164,18 +191,17 @@ body {
   z-index: 2;
 }
 .section4__column1__images__image1--moveTop, .section4__column2__images__image1--moveTop, .section4__column3__images__image1--moveTop {
-  bottom: 1.5em;
   z-index: 1;
 }
 .section4__column1__images__image2, .section4__column2__images__image2, .section4__column3__images__image2 {
   position: absolute;
   z-index: 1;
-  right: 3em;
-  bottom: 1.5em;
+  left: 47%;
+  bottom: 20%;
 }
 .section4__column1__images__image2--moveRight, .section4__column2__images__image2--moveRight, .section4__column3__images__image2--moveRight {
-  bottom: 1em;
-  right: 3.5em;
+  top: 6%;
+  left: 17%;
 }
 .section4__column1__text, .section4__column2__text, .section4__column3__text {
   width: 85%;
