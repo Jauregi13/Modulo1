@@ -8,8 +8,22 @@
     </head>
     <body>
         <header class="header header--shadow">
-            <h2 class="header__logo header__logo--blue">OXYGENShop</h2>
-            <div class="header__menu header__menu--blue">&#9776;</div>
+            <div class="header__content">
+                <h2 class="header__content__logo header__content__logo--blue">OXYGENShop</h2>
+                <div class="header__content__button-menu header__button-menu--blue">
+                    <input type="checkbox" id="menu" class="header__content__button-menu__checkbox" />
+                    <label for="menu" class="header__content__button-menu__label header__content__button-menu__label--blue">&#9776;</label>
+                </div>
+            </div>
+        
+            <div class="header__menu">
+                <ul>
+                    <li class="header__menu__item">WHY US</li>
+                    <li class="header__menu__item">BENEFITS</li>
+                    <li class="header__menu__item">PRICES</li>
+                    <li class="header__menu__item">CONTACT</li>
+                </ul>
+            </div>
         </header>
 
         <section class="sectionIntroduction">
@@ -251,4 +265,15 @@
 
         </footer>
     </body>
+
+    <script>
+
+        let checkbox = document.getElementById('menu'); // Reemplaza 'menu' con el ID de tu checkbox
+        console.log(checkbox.checked);
+        if (checkbox.checked) {
+            console.log('El checkbox está marcado.');
+        } else {
+            console.log('El checkbox no está marcado.');
+        }
+    </script>
 </html>
