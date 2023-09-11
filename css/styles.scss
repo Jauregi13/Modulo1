@@ -752,11 +752,13 @@ body {
 
          &__images {
             width: max-content;
-            top: 20%;
+            
          }
 
          &__text {
+            margin-top: 4%;
             width: 30%;
+            height: fit-content;
 
             &__title {
                font-size: 36px;
@@ -774,12 +776,13 @@ body {
          flex-direction: row-reverse;
 
          &__text {
-            margin-top: 4%;
-            height: fit-content;
-            border-bottom: 4px solid #FB3B64;
+            border-bottom: 4px solid $red_color;
+            width: 44%;
          }
 
          &__images {
+
+            top: 20%;
 
             &__image1 {
                background-image: url('./../img/macbook2.svg');
@@ -795,6 +798,52 @@ body {
             }
 
 
+         }
+      }
+
+      &__column2 {
+
+         &__images {
+
+            bottom: 8%;
+            right: 10%;
+
+            &__image1 {
+               background-image: url('./../img/ellipse3-2.svg');
+               width: 320px;
+               height: 320px;
+            }
+
+            &__image2 {
+               background-image: url('./../img/iPhone2.svg');
+               width: 426px;
+               height: 328px;
+               left: 2%;
+            }
+         }
+
+         &__text {
+            width: 38%;
+            border-bottom: 4px solid $primary_color;
+
+            &__title {
+               width: 70%;
+            }
+         }
+      }
+
+      &__column3 {
+
+         padding-top: 0;
+
+         &__text {
+            width: 50%;
+            height: auto;
+         }
+
+         &__green {
+            width: 50%;
+            height: auto;
          }
       }
    }

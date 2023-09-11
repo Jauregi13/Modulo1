@@ -586,10 +586,11 @@ body {
   }
   .section4__column1__images, .section4__column2__images, .section4__column3__images {
     width: max-content;
-    top: 20%;
   }
   .section4__column1__text, .section4__column2__text, .section4__column3__text {
+    margin-top: 4%;
     width: 30%;
+    height: fit-content;
   }
   .section4__column1__text__title, .section4__column2__text__title, .section4__column3__text__title {
     font-size: 36px;
@@ -603,9 +604,11 @@ body {
     flex-direction: row-reverse;
   }
   .section4__column1__text {
-    margin-top: 4%;
-    height: fit-content;
     border-bottom: 4px solid #FB3B64;
+    width: 44%;
+  }
+  .section4__column1__images {
+    top: 20%;
   }
   .section4__column1__images__image1 {
     background-image: url("./../img/macbook2.svg");
@@ -617,6 +620,39 @@ body {
     width: 255px;
     height: 255px;
     bottom: 38%;
+  }
+  .section4__column2__images {
+    bottom: 8%;
+    right: 10%;
+  }
+  .section4__column2__images__image1 {
+    background-image: url("./../img/ellipse3-2.svg");
+    width: 320px;
+    height: 320px;
+  }
+  .section4__column2__images__image2 {
+    background-image: url("./../img/iPhone2.svg");
+    width: 426px;
+    height: 328px;
+    left: 2%;
+  }
+  .section4__column2__text {
+    width: 38%;
+    border-bottom: 4px solid #08A6E4;
+  }
+  .section4__column2__text__title {
+    width: 70%;
+  }
+  .section4__column3 {
+    padding-top: 0;
+  }
+  .section4__column3__text {
+    width: 50%;
+    height: auto;
+  }
+  .section4__column3__green {
+    width: 50%;
+    height: auto;
   }
 }
 
