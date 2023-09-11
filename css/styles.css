@@ -540,10 +540,18 @@ body {
   .section2__image {
     background-image: url("./../img/background.png");
   }
+  .section3 {
+    width: 75%;
+    margin: 0 auto;
+  }
   .section3__title {
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
+  }
+  .section3__column1, .section3__column2, .section3__column3 {
+    display: inline-block;
+    width: 33%;
   }
 }
 

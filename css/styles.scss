@@ -684,10 +684,19 @@ body {
 
    .section3 {
 
+      width: 75%;
+      margin: 0 auto;
+
       &__title {
          font-weight: 400;
          font-size: 36px;
          line-height: 42px;
+      }
+
+      &__column1, &__column2, &__column3 {
+         display: inline-block;
+         width: 33%;
+
       }
    }
 
