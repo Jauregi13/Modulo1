@@ -136,7 +136,7 @@ body {
    width: 100%;
    
    margin: 0 auto;
-   margin-bottom: 25px;
+   margin-bottom: 20px;
 
    &__image {
       background-image: url('./../img/background1.png');
@@ -678,19 +678,26 @@ body {
       }
    }
 
-   .section2__image {
-      background-image: url('./../img/background.png');
+   .section2 {
+      padding-bottom: 50px;
+
+      &__image {
+         background-image: url('./../img/background.png');
+      }
    }
 
    .section3 {
 
       width: 75%;
       margin: 0 auto;
+      padding-bottom: 100px;
 
       &__title {
          font-weight: 400;
          font-size: 36px;
          line-height: 42px;
+         width: 100%;
+         margin-bottom: 2em;
       }
 
       &__column1, &__column2, &__column3 {
