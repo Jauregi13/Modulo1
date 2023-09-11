@@ -531,6 +531,9 @@ body {
     display: flex;
     align-items: center;
   }
+  .sectionIntroduction__button {
+    width: 440px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
