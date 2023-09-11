@@ -108,25 +108,28 @@ body {
 .section2 {
   display: block;
   width: 100%;
-  text-align: center;
   margin: 0 auto;
   margin-bottom: 25px;
 }
 .section2__image {
-  height: auto;
+  background-image: url("./../img/background1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 267px;
   width: 100%;
-  margin-bottom: 3px;
-}
-.section2__text {
-  font-size: 30px;
-  font-weight: 300;
-  margin: 0 auto;
-  width: 60%;
 }
 
 .section3 {
   display: block;
   width: 100%;
+  text-align: center;
+}
+.section3__title {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 1em;
 }
 .section3__column1, .section3__column2, .section3__column3 {
   width: 40%;
@@ -533,6 +536,9 @@ body {
   }
   .sectionIntroduction__button {
     width: 440px;
+  }
+  .section2__image {
+    background-image: url("./../img/background.png");
   }
 }
 
