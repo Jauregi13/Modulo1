@@ -597,7 +597,7 @@ body {
   }
   .section4__column1__text, .section4__column1__element1__text, .section4__column2__text, .section4__column2__element1__text, .section4__column3__text, .section4__column3__element1__text {
     margin-top: 4%;
-    width: 33%;
+    width: 35%;
     height: fit-content;
   }
   .section4__column1__text__title, .section4__column1__element1__text__title, .section4__column2__text__title, .section4__column2__element1__text__title, .section4__column3__text__title, .section4__column3__element1__text__title {
@@ -631,7 +631,7 @@ body {
   }
   .section4__column2__images {
     bottom: 8%;
-    right: 15%;
+    right: 13%;
   }
   .section4__column2__images__image1 {
     background-image: url("./../img/ellipse3-2.svg");
@@ -646,6 +646,7 @@ body {
   }
   .section4__column2__text {
     border-bottom: 4px solid #08A6E4;
+    margin-right: 3%;
   }
   .section4__column2__text__title {
     width: 70%;
