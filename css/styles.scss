@@ -230,9 +230,9 @@ body {
       &__images {
          position: relative;
          text-align: center;
-         width: 194px;
          margin: 0 auto;
          margin-bottom: 27px;
+         width: 194px;
 
          &__image1 {
             position: relative;
@@ -301,6 +301,43 @@ body {
       
 
 
+   }
+
+   &__column1 {
+
+      &__images {
+
+         &__image1 {
+            background-image: url('./../img/macbook.png');
+            height: 110px;
+         }
+
+         &__image2 {
+            background-image: url('./../img/circle.png');
+            height: 127px;
+            width: 127px;
+         }
+      }
+   }
+
+   &__column2 {
+
+      &__images {
+
+         &__image1 {
+            background-image: url('./../img/ellipse4.png');
+            width: 132px;
+            height: 132px;
+            margin: 0 auto;
+         }
+
+         &__image2 {
+            background-image: url('./../img/iPhone.png');
+            width: 175px;
+            height: 135px;
+            margin: 0 auto;
+         }
+      }
    }
 }
 
@@ -704,6 +741,61 @@ body {
          display: inline-block;
          width: 33%;
 
+      }
+   }
+
+   .section4 {
+
+      &__column1, &__column2, &__column3 {
+         display: flex;
+         height: 350px;
+
+         &__images {
+            width: max-content;
+            top: 20%;
+         }
+
+         &__text {
+            width: 30%;
+
+            &__title {
+               font-size: 36px;
+               line-height: 42px;
+            }
+
+            &__parag {
+               font-size: 16px;
+               line-height: 22px;
+            }
+         }
+      }
+
+      &__column1 {
+         flex-direction: row-reverse;
+
+         &__text {
+            margin-top: 4%;
+            height: fit-content;
+            border-bottom: 4px solid #FB3B64;
+         }
+
+         &__images {
+
+            &__image1 {
+               background-image: url('./../img/macbook2.svg');
+               width: 387px;
+               height: 219px;
+            }
+
+            &__image2 {
+               background-image: url('./../img/rectange.svg');
+               width: 255px;
+               height: 255px;
+               bottom: 38%;
+            }
+
+
+         }
       }
    }
 
