@@ -207,6 +207,7 @@ body {
          font-size: 17px;
          color: #A5A5A5;
       }
+      
    }
 }
 
@@ -230,9 +231,9 @@ body {
       &__images {
          position: relative;
          text-align: center;
-         width: 194px;
          margin: 0 auto;
          margin-bottom: 27px;
+         width: 194px;
 
          &__image1 {
             position: relative;
@@ -256,7 +257,7 @@ body {
          }
       }
 
-      &__text {
+      &__text, &__element1__text{
          width: 85%;
          margin-left: 22px;
 
@@ -279,12 +280,15 @@ body {
          }
       }
 
-      &__green {
-         background-color: $green_color;
-         height: 200px;
-         position: relative;
-         border: 1px solid #E8E9ED;
-         border-radius: 5px;
+      &__element2{
+
+         &--green {
+            background-color: $green_color;
+            height: 200px;
+            position: relative;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+         }
 
          &__image {
             position: absolute;
@@ -292,15 +296,62 @@ body {
             top: 65%;
             transform: translate(-50%,-50%);
          }
+         
       }
 
-      &--bottomChange {
+      &__element1--bottomChange {
          margin-bottom: 0;
       }
 
       
 
 
+   }
+
+   &__column1 {
+
+      &__images {
+
+         &__image1 {
+            background-image: url('./../img/macbook.png');
+            height: 110px;
+         }
+
+         &__image2 {
+            background-image: url('./../img/circle.png');
+            height: 127px;
+            width: 127px;
+         }
+      }
+   }
+
+   &__column2 {
+
+      &__images {
+
+         &__image1 {
+            background-image: url('./../img/ellipse4.png');
+            width: 132px;
+            height: 132px;
+            margin: 0 auto;
+         }
+
+         &__image2 {
+            background-image: url('./../img/iPhone.png');
+            width: 175px;
+            height: 135px;
+            margin: 0 auto;
+         }
+      }
+   }
+
+   &__column3 {
+      background-color: #F7F7F7;
+      border: none;
+      &__element1 {
+         background-color: #FFFFFF;
+         border: 1px solid #E8E9ED;
+      }
    }
 }
 
@@ -704,6 +755,119 @@ body {
          display: inline-block;
          width: 33%;
 
+      }
+   }
+
+   .section4 {
+
+      &__column1, &__column2, &__column3{
+         display: flex;
+         height: 370px;
+
+         &__images {
+            width: max-content;
+            
+         }
+
+         &__text, &__element1__text {
+            margin-top: 4%;
+            width: 35%;
+            height: fit-content;
+
+            &__title {
+               font-size: 36px;
+               line-height: 42px;
+            }
+
+            &__parag {
+               font-size: 16px;
+               line-height: 22px;
+            }
+         }
+      }
+
+      &__column1 {
+         flex-direction: row-reverse;
+
+         &__text {
+            border-bottom: 4px solid $red_color;
+            
+         }
+
+         &__images {
+            left: 3%;
+            top: 20%;
+
+            &__image1 {
+               background-image: url('./../img/macbook2.svg');
+               width: 387px;
+               height: 219px;
+            }
+
+            &__image2 {
+               background-image: url('./../img/rectange.svg');
+               width: 255px;
+               height: 255px;
+               bottom: 38%;
+            }
+
+
+         }
+      }
+
+      &__column2 {
+
+         &__images {
+
+            bottom: 8%;
+            right: 13%;
+
+            &__image1 {
+               background-image: url('./../img/ellipse3-2.svg');
+               width: 320px;
+               height: 320px;
+            }
+
+            &__image2 {
+               background-image: url('./../img/iPhone2.svg');
+               width: 426px;
+               height: 328px;
+               left: 2%;
+            }
+         }
+
+         &__text {
+            border-bottom: 4px solid $primary_color;
+            margin-right: 3%;
+            &__title {
+               width: 70%;
+            }
+         }
+      }
+
+      &__column3 {
+         padding-top: 0;
+
+         &__element1 {
+            width: 60%;
+            margin-right: 7%;
+            
+            &__text {
+               width: 65%;
+               height: auto;
+               margin-top: 10%;
+               border-bottom: 4px solid $green_color;
+            }
+         }
+
+         &__element2 {
+            width: 42%;
+            height: auto;
+
+            &__image {
+               top: 52%;
+            }
+         }
       }
    }
 

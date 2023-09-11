@@ -190,9 +190,9 @@ body {
 .section4__column1__images, .section4__column2__images, .section4__column3__images {
   position: relative;
   text-align: center;
-  width: 194px;
   margin: 0 auto;
   margin-bottom: 27px;
+  width: 194px;
 }
 .section4__column1__images__image1, .section4__column2__images__image1, .section4__column3__images__image1 {
   position: relative;
@@ -211,40 +211,69 @@ body {
   top: 6%;
   left: 17%;
 }
-.section4__column1__text, .section4__column2__text, .section4__column3__text {
+.section4__column1__text, .section4__column1__element1__text, .section4__column2__text, .section4__column2__element1__text, .section4__column3__text, .section4__column3__element1__text {
   width: 85%;
   margin-left: 22px;
 }
-.section4__column1__text__title, .section4__column2__text__title, .section4__column3__text__title {
+.section4__column1__text__title, .section4__column1__element1__text__title, .section4__column2__text__title, .section4__column2__element1__text__title, .section4__column3__text__title, .section4__column3__element1__text__title {
   margin-bottom: 10px;
   font-size: 30px;
   line-height: 35px;
 }
-.section4__column1__text__parag, .section4__column2__text__parag, .section4__column3__text__parag {
+.section4__column1__text__parag, .section4__column1__element1__text__parag, .section4__column2__text__parag, .section4__column2__element1__text__parag, .section4__column3__text__parag, .section4__column3__element1__text__parag {
   font-family: Open Sans;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 30px;
 }
-.section4__column1__text__parag--bigger, .section4__column2__text__parag--bigger, .section4__column3__text__parag--bigger {
+.section4__column1__text__parag--bigger, .section4__column1__element1__text__parag--bigger, .section4__column2__text__parag--bigger, .section4__column2__element1__text__parag--bigger, .section4__column3__text__parag--bigger, .section4__column3__element1__text__parag--bigger {
   font-size: 16px;
   line-height: 22px;
 }
-.section4__column1__green, .section4__column2__green, .section4__column3__green {
+.section4__column1__element2--green, .section4__column2__element2--green, .section4__column3__element2--green {
   background-color: #55DFB4;
   height: 200px;
   position: relative;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
 }
-.section4__column1__green__image, .section4__column2__green__image, .section4__column3__green__image {
+.section4__column1__element2__image, .section4__column2__element2__image, .section4__column3__element2__image {
   position: absolute;
   left: 45%;
   top: 65%;
   transform: translate(-50%, -50%);
 }
-.section4__column1--bottomChange, .section4__column2--bottomChange, .section4__column3--bottomChange {
+.section4__column1__element1--bottomChange, .section4__column2__element1--bottomChange, .section4__column3__element1--bottomChange {
   margin-bottom: 0;
+}
+.section4__column1__images__image1 {
+  background-image: url("./../img/macbook.png");
+  height: 110px;
+}
+.section4__column1__images__image2 {
+  background-image: url("./../img/circle.png");
+  height: 127px;
+  width: 127px;
+}
+.section4__column2__images__image1 {
+  background-image: url("./../img/ellipse4.png");
+  width: 132px;
+  height: 132px;
+  margin: 0 auto;
+}
+.section4__column2__images__image2 {
+  background-image: url("./../img/iPhone.png");
+  width: 175px;
+  height: 135px;
+  margin: 0 auto;
+}
+.section4__column3 {
+  background-color: #F7F7F7;
+  border: none;
+}
+.section4__column3__element1 {
+  background-color: #FFFFFF;
+  border: 1px solid #E8E9ED;
 }
 
 .sectionPrices {
@@ -558,6 +587,89 @@ body {
   .section3__column1, .section3__column2, .section3__column3 {
     display: inline-block;
     width: 33%;
+  }
+  .section4__column1, .section4__column2, .section4__column3 {
+    display: flex;
+    height: 370px;
+  }
+  .section4__column1__images, .section4__column2__images, .section4__column3__images {
+    width: max-content;
+  }
+  .section4__column1__text, .section4__column1__element1__text, .section4__column2__text, .section4__column2__element1__text, .section4__column3__text, .section4__column3__element1__text {
+    margin-top: 4%;
+    width: 35%;
+    height: fit-content;
+  }
+  .section4__column1__text__title, .section4__column1__element1__text__title, .section4__column2__text__title, .section4__column2__element1__text__title, .section4__column3__text__title, .section4__column3__element1__text__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .section4__column1__text__parag, .section4__column1__element1__text__parag, .section4__column2__text__parag, .section4__column2__element1__text__parag, .section4__column3__text__parag, .section4__column3__element1__text__parag {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .section4__column1 {
+    flex-direction: row-reverse;
+  }
+  .section4__column1__text {
+    border-bottom: 4px solid #FB3B64;
+  }
+  .section4__column1__images {
+    left: 3%;
+    top: 20%;
+  }
+  .section4__column1__images__image1 {
+    background-image: url("./../img/macbook2.svg");
+    width: 387px;
+    height: 219px;
+  }
+  .section4__column1__images__image2 {
+    background-image: url("./../img/rectange.svg");
+    width: 255px;
+    height: 255px;
+    bottom: 38%;
+  }
+  .section4__column2__images {
+    bottom: 8%;
+    right: 13%;
+  }
+  .section4__column2__images__image1 {
+    background-image: url("./../img/ellipse3-2.svg");
+    width: 320px;
+    height: 320px;
+  }
+  .section4__column2__images__image2 {
+    background-image: url("./../img/iPhone2.svg");
+    width: 426px;
+    height: 328px;
+    left: 2%;
+  }
+  .section4__column2__text {
+    border-bottom: 4px solid #08A6E4;
+    margin-right: 3%;
+  }
+  .section4__column2__text__title {
+    width: 70%;
+  }
+  .section4__column3 {
+    padding-top: 0;
+  }
+  .section4__column3__element1 {
+    width: 60%;
+    margin-right: 7%;
+  }
+  .section4__column3__element1__text {
+    width: 65%;
+    height: auto;
+    margin-top: 10%;
+    border-bottom: 4px solid #55DFB4;
+  }
+  .section4__column3__element2 {
+    width: 42%;
+    height: auto;
+  }
+  .section4__column3__element2__image {
+    top: 52%;
   }
 }
 
