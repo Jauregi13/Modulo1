@@ -207,6 +207,7 @@ body {
          font-size: 17px;
          color: #A5A5A5;
       }
+      
    }
 }
 
@@ -256,7 +257,7 @@ body {
          }
       }
 
-      &__text {
+      &__text, &__element1__text{
          width: 85%;
          margin-left: 22px;
 
@@ -279,12 +280,15 @@ body {
          }
       }
 
-      &__green {
-         background-color: $green_color;
-         height: 200px;
-         position: relative;
-         border: 1px solid #E8E9ED;
-         border-radius: 5px;
+      &__element2{
+
+         &--green {
+            background-color: $green_color;
+            height: 200px;
+            position: relative;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+         }
 
          &__image {
             position: absolute;
@@ -292,9 +296,10 @@ body {
             top: 65%;
             transform: translate(-50%,-50%);
          }
+         
       }
 
-      &--bottomChange {
+      &__element1--bottomChange {
          margin-bottom: 0;
       }
 
@@ -337,6 +342,15 @@ body {
             height: 135px;
             margin: 0 auto;
          }
+      }
+   }
+
+   &__column3 {
+      background-color: #F7F7F7;
+      border: none;
+      &__element1 {
+         background-color: #FFFFFF;
+         border: 1px solid #E8E9ED;
       }
    }
 }
@@ -746,18 +760,18 @@ body {
 
    .section4 {
 
-      &__column1, &__column2, &__column3 {
+      &__column1, &__column2, &__column3{
          display: flex;
-         height: 350px;
+         height: 370px;
 
          &__images {
             width: max-content;
             
          }
 
-         &__text {
+         &__text, &__element1__text {
             margin-top: 4%;
-            width: 30%;
+            width: 35%;
             height: fit-content;
 
             &__title {
@@ -777,11 +791,11 @@ body {
 
          &__text {
             border-bottom: 4px solid $red_color;
-            width: 44%;
+            
          }
 
          &__images {
-
+            left: 3%;
             top: 20%;
 
             &__image1 {
@@ -806,7 +820,7 @@ body {
          &__images {
 
             bottom: 8%;
-            right: 10%;
+            right: 13%;
 
             &__image1 {
                background-image: url('./../img/ellipse3-2.svg');
@@ -823,9 +837,8 @@ body {
          }
 
          &__text {
-            width: 38%;
             border-bottom: 4px solid $primary_color;
-
+            margin-right: 3%;
             &__title {
                width: 70%;
             }
@@ -833,17 +846,27 @@ body {
       }
 
       &__column3 {
-
          padding-top: 0;
 
-         &__text {
-            width: 50%;
-            height: auto;
+         &__element1 {
+            width: 60%;
+            margin-right: 7%;
+            
+            &__text {
+               width: 65%;
+               height: auto;
+               margin-top: 10%;
+               border-bottom: 4px solid $green_color;
+            }
          }
 
-         &__green {
-            width: 50%;
+         &__element2 {
+            width: 42%;
             height: auto;
+
+            &__image {
+               top: 52%;
+            }
          }
       }
    }
