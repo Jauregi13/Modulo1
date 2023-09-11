@@ -682,4 +682,13 @@ body {
       background-image: url('./../img/background.png');
    }
 
+   .section3 {
+
+      &__title {
+         font-weight: 400;
+         font-size: 36px;
+         line-height: 42px;
+      }
+   }
+
 }
