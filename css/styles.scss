@@ -502,21 +502,21 @@ body {
    width: 80%;
    margin: 0 auto;
 
-   &__title {
-      font-size: 40px;
-      line-height: 47px;
-   }
-
-   &__text {
-      font-family: $font_secondary;
-      font-size: 16px;
-      line-height: 22px;
-      margin-bottom: 38px;
-   }
-
    &__info {
 
       margin-bottom: 53px;
+
+      &__title {
+         font-size: 40px;
+         line-height: 47px;
+      }
+   
+      &__text {
+         font-family: $font_secondary;
+         font-size: 16px;
+         line-height: 22px;
+         margin-bottom: 38px;
+      }
 
       &__email, &__phone {
          display: block;
@@ -570,64 +570,68 @@ body {
             margin-bottom: 32px;
          }
       }
-   }
 
-   &__protection {
+      &__protection {
 
-      input[type=checkbox] {
-         display: none;
-      }
-
-      &__check:not(:checked) + &__text::before {
-         content: '';
-         appearance: none;
-         border: 1px solid #95989A;
-         border-radius: 4px;
-         width: 24px;
-         height: 24px;
-         display: inline-block;
-         vertical-align: top;
-         margin-right: 10px;
-      }
-
-      &__check:checked + &__text::before {
-         content: '\2713';
-         font-size: 11px;
-         font-family: 'FontAwesome';
-         appearance: none;
-         border: 1px solid #95989A;
-         border-radius: 4px;
-         width: 24px;
-         height: 24px;
-         display: inline-block;
-         vertical-align: top;
-         margin-right: 10px;
-      }
-
-      &__text {
-         width: 82%;
-         display: inline-block;
-         font-size: 12px;
-         font-family: $font_secondary;
-         line-height: 16px;
-         margin-bottom: 33px;
-      }
-
-      &__button {
-         height: 57px;
-         width: 226px;
-         background-color: $primary_color;
-         color: #FFFFFF;
-         border: 1px solid $primary_color;
-         border-radius: 35px;
-         font-size: 13px;
-         font-family: $font_secondary;
-         font-weight: 700;
-         line-height: 18px;
-         box-shadow: 5px 10px 14px $secondary_color;
-         margin-bottom: 44px;
-         position: relative;
-         left: 8em;
+         input[type=checkbox] {
+            display: none;
+         }
+   
+         &__check:not(:checked) + &__text::before {
+            content: '';
+            appearance: none;
+            border: 1px solid #95989A;
+            border-radius: 4px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+         }
+   
+         &__check:checked + &__text::before {
+            content: '\2713';
+            font-size: 11px;
+            font-family: 'FontAwesome';
+            appearance: none;
+            border: 1px solid #95989A;
+            border-radius: 4px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+         }
+   
+         &__text {
+            width: 82%;
+            display: inline-block;
+            font-size: 12px;
+            font-family: $font_secondary;
+            line-height: 16px;
+            margin-bottom: 33px;
+         }
+   
+         &__button {
+   
+            text-align: right;
+   
+            &__style {
+               height: 57px;
+               width: 226px;
+               background-color: $primary_color;
+               color: #FFFFFF;
+               border: 1px solid $primary_color;
+               border-radius: 35px;
+               font-size: 13px;
+               font-family: $font_secondary;
+               font-weight: 700;
+               line-height: 18px;
+               box-shadow: 5px 10px 14px $secondary_color;
+               margin-bottom: 44px;
+            }
+            
+         }
       }
    }
 
@@ -876,6 +880,7 @@ body {
    .sectionPrices {
 
       text-align: center;
+      margin-bottom: 3%;
       &__title {
          margin-bottom: 50px;
       }
@@ -923,6 +928,42 @@ body {
 
       &__price3:hover {
          box-shadow: 5px 10px 27px -10px $green_color;
+      }
+   }
+
+   .sectionContact {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+
+      &__info {
+         width: 50%;
+
+         &__title {
+            font-size: 49px;
+            line-height: 57px;
+            margin-bottom: 5%;
+         }
+
+         &__email, &__phone {
+            display: inline-block;
+         }
+
+         &__phone {
+            margin-left: 20px;
+         }
+      }
+
+      &__form {
+         width: 50%;
+         margin-left: 7%;
+
+         &__protection {
+
+            &__text {
+               width: 100%;
+            }
+         }
       }
    }
 
