@@ -16,7 +16,7 @@ body {
   width: 100%;
 }
 .header--shadow {
-  box-shadow: 0 3px 6px #000000;
+  box-shadow: 0 3px 9px -4px #000000;
 }
 .header__content {
   display: block;
@@ -66,7 +66,8 @@ body {
 .header__content__nav__item--active {
   color: #000000;
 }
-.header #menu:checked ~ .header__menu {
+
+.header__content__button-menu__checkbox:checked ~ .header__content__nav {
   display: block;
 }
 
@@ -182,7 +183,6 @@ body {
   width: 80%;
   background-color: #FFFFFF;
   margin: 0 auto;
-  padding-top: 37px;
   margin-bottom: 41px;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
@@ -192,6 +192,7 @@ body {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 27px;
+  margin-top: 30px;
   width: 194px;
 }
 .section4__column1__images__image1, .section4__column2__images__image1, .section4__column3__images__image1 {
@@ -210,6 +211,9 @@ body {
 .section4__column1__images__image2--moveRight, .section4__column2__images__image2--moveRight, .section4__column3__images__image2--moveRight {
   top: 6%;
   left: 17%;
+}
+.section4__column1--bottomChange, .section4__column2--bottomChange, .section4__column3--bottomChange {
+  margin-bottom: 0;
 }
 .section4__column1__text, .section4__column1__element1__text, .section4__column2__text, .section4__column2__element1__text, .section4__column3__text, .section4__column3__element1__text {
   width: 85%;
@@ -243,9 +247,6 @@ body {
   top: 65%;
   transform: translate(-50%, -50%);
 }
-.section4__column1__element1--bottomChange, .section4__column2__element1--bottomChange, .section4__column3__element1--bottomChange {
-  margin-bottom: 0;
-}
 .section4__column1__images__image1 {
   background-image: url("./../img/macbook.png");
   height: 110px;
@@ -272,6 +273,7 @@ body {
   border: none;
 }
 .section4__column3__element1 {
+  padding-top: 10%;
   background-color: #FFFFFF;
   border: 1px solid #E8E9ED;
 }
@@ -600,7 +602,7 @@ body {
     width: max-content;
   }
   .section4__column1__text, .section4__column1__element1__text, .section4__column2__text, .section4__column2__element1__text, .section4__column3__text, .section4__column3__element1__text {
-    margin-top: 4%;
+    margin-top: 8%;
     width: 35%;
     height: fit-content;
   }
@@ -634,8 +636,8 @@ body {
     bottom: 38%;
   }
   .section4__column2__images {
-    bottom: 8%;
-    right: 13%;
+    bottom: 4%;
+    right: 10%;
   }
   .section4__column2__images__image1 {
     background-image: url("./../img/ellipse3-2.svg");
@@ -655,12 +657,10 @@ body {
   .section4__column2__text__title {
     width: 70%;
   }
-  .section4__column3 {
-    padding-top: 0;
-  }
   .section4__column3__element1 {
     width: 60%;
     margin-right: 7%;
+    padding-top: 0;
   }
   .section4__column3__element1__text {
     width: 65%;
