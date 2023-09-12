@@ -368,7 +368,7 @@ body {
       margin-bottom: 14px;
    }
 
-   &__price {
+   &__price1, &__price2, &__price3 {
       width: 75%;
       border-radius: 18px;
       margin: 0 auto;
@@ -760,6 +760,8 @@ body {
 
    .section4 {
 
+      margin-bottom: 70px;
+
       &__column1, &__column2, &__column3{
          display: flex;
          height: 370px;
@@ -868,6 +870,59 @@ body {
                top: 52%;
             }
          }
+      }
+   }
+
+   .sectionPrices {
+
+      text-align: center;
+      &__title {
+         margin-bottom: 50px;
+      }
+
+      &__price1, &__price2, &__price3 {
+         margin-right: 4%;
+         margin-left: 4%;
+         display: inline-block;
+         width: 23%;
+
+         &__type {
+            display: block;
+            margin-bottom: 3em;
+            margin: 0 auto;
+            position: static;
+            margin-top: 10%;
+            margin-bottom: 20%;
+         }
+
+         &__features {
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+         }
+      }
+
+      &__price1 {
+
+         &__type {
+            margin-bottom: 24%;
+         }
+      }
+
+      &__price1:hover, &__price2:hover, &__price3:hover {
+         width: 30%;         
+      }
+
+      &__price1:hover {
+         box-shadow: 5px 10px 27px -10px $red_color;
+      }
+
+      &__price2:hover {
+         box-shadow: 5px 10px 27px -10px $secondary_color;
+      }
+
+      &__price3:hover {
+         box-shadow: 5px 10px 27px -10px $green_color;
       }
    }
 
