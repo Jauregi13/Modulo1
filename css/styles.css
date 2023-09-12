@@ -393,18 +393,18 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-.sectionContact__title {
+.sectionContact__info {
+  margin-bottom: 53px;
+}
+.sectionContact__info__title {
   font-size: 40px;
   line-height: 47px;
 }
-.sectionContact__text {
+.sectionContact__info__text {
   font-family: Open Sans;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 38px;
-}
-.sectionContact__info {
-  margin-bottom: 53px;
 }
 .sectionContact__info__email, .sectionContact__info__phone {
   display: block;
@@ -446,10 +446,10 @@ body {
 .sectionContact__form__name--margin-bottom-32, .sectionContact__form__email--margin-bottom-32 {
   margin-bottom: 32px;
 }
-.sectionContact__protection input[type=checkbox] {
+.sectionContact__form__protection input[type=checkbox] {
   display: none;
 }
-.sectionContact__protection__check:not(:checked) + .sectionContact__protection__text::before {
+.sectionContact__form__protection__check:not(:checked) + .sectionContact__form__protection__text::before {
   content: "";
   appearance: none;
   border: 1px solid #95989A;
@@ -460,7 +460,7 @@ body {
   vertical-align: top;
   margin-right: 10px;
 }
-.sectionContact__protection__check:checked + .sectionContact__protection__text::before {
+.sectionContact__form__protection__check:checked + .sectionContact__form__protection__text::before {
   content: "✓";
   font-size: 11px;
   font-family: "FontAwesome";
@@ -473,7 +473,7 @@ body {
   vertical-align: top;
   margin-right: 10px;
 }
-.sectionContact__protection__text {
+.sectionContact__form__protection__text {
   width: 82%;
   display: inline-block;
   font-size: 12px;
@@ -481,7 +481,10 @@ body {
   line-height: 16px;
   margin-bottom: 33px;
 }
-.sectionContact__protection__button {
+.sectionContact__form__protection__button {
+  text-align: right;
+}
+.sectionContact__form__protection__button__style {
   height: 57px;
   width: 226px;
   background-color: #08A6E4;
@@ -494,8 +497,6 @@ body {
   line-height: 18px;
   box-shadow: 5px 10px 14px #07ACE6;
   margin-bottom: 44px;
-  position: relative;
-  left: 8em;
 }
 
 .footer {
@@ -676,6 +677,7 @@ body {
   }
   .sectionPrices {
     text-align: center;
+    margin-bottom: 3%;
   }
   .sectionPrices__title {
     margin-bottom: 50px;
@@ -713,6 +715,32 @@ body {
   }
   .sectionPrices__price3:hover {
     box-shadow: 5px 10px 27px -10px #55DFB4;
+  }
+  .sectionContact {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+  }
+  .sectionContact__info {
+    width: 50%;
+  }
+  .sectionContact__info__title {
+    font-size: 49px;
+    line-height: 57px;
+    margin-bottom: 5%;
+  }
+  .sectionContact__info__email, .sectionContact__info__phone {
+    display: inline-block;
+  }
+  .sectionContact__info__phone {
+    margin-left: 20px;
+  }
+  .sectionContact__form {
+    width: 50%;
+    margin-left: 7%;
+  }
+  .sectionContact__form__protection__text {
+    width: 100%;
   }
 }
 
