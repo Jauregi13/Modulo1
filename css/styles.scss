@@ -85,11 +85,7 @@ body {
    
 }
 
-.header__content__button-menu__checkbox:checked ~ .header__content__nav {
-   display: block;
-}
-
-.sectionIntroduction {
+.section-introduction {
    width: 100%;
    display: block;
    margin-top: 100px;
@@ -239,7 +235,7 @@ body {
             position: relative;
             z-index: 2;
 
-            &--moveTop {
+            &--move-top {
                z-index: 1;
             }
          }
@@ -250,14 +246,14 @@ body {
             left: 47%;
             bottom: 20%;
 
-            &--moveRight {
+            &--move-right {
                top: 6%;
                left: 17%;
             }
          }
       }
 
-      &--bottomChange {
+      &--bottom-change {
          margin-bottom: 0;
       }
 
@@ -354,7 +350,7 @@ body {
    }
 }
 
-.sectionPrices {
+.section-prices {
 
    padding-top: 53px;
    
@@ -434,14 +430,14 @@ body {
          text-align: left;
          display: inline-block;
 
-         &__checkMark {
+         &__check-mark {
             background: url('./../img/checkbox.png');
             width: 11px;
             height: 11px;
             display: inline-block;
          }
 
-         &__crossMark {
+         &__cross-mark {
             background: url('./../img/cross.png');
             width: 11px;
             height: 11px;
@@ -467,7 +463,6 @@ body {
          margin: 0 auto;
          position: relative;
          top: 2em;
-         
          border-radius: 23px;
          font-size: 13px;
          font-family: $font_secondary;
@@ -496,7 +491,7 @@ body {
    
 }
 
-.sectionContact {
+.section-contact {
 
    width: 80%;
    margin: 0 auto;
@@ -563,7 +558,14 @@ body {
             border: none;
             border-radius: unset;
             border-bottom: 1px solid #95989A;
+            font-size: 15px;
          }
+
+         &__input:focus {
+            outline: none;
+         }
+
+         
 
          &--margin-bottom-32 {
             margin-bottom: 32px;
@@ -576,30 +578,23 @@ body {
             display: none;
          }
    
-         &__check:not(:checked) + &__text::before {
+         &__text::before {
             content: '';
-            appearance: none;
             border: 1px solid #95989A;
             border-radius: 4px;
             width: 24px;
             height: 24px;
             display: inline-block;
-            vertical-align: top;
+            vertical-align: middle;
+            text-align: center;
             margin-right: 10px;
          }
    
          &__check:checked + &__text::before {
             content: '\2713';
-            font-size: 11px;
-            font-family: 'FontAwesome';
-            appearance: none;
-            border: 1px solid #95989A;
-            border-radius: 4px;
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 10px;
+            color: $primary_color;
+            font-size: 20px;
+
          }
    
          &__text {
@@ -732,7 +727,7 @@ body {
       
    }
 
-   .sectionIntroduction {
+   .section-introduction {
 
       &__button {
          width: 440px;
@@ -883,7 +878,7 @@ body {
       }
    }
 
-   .sectionPrices {
+   .section-prices {
 
       text-align: center;
       margin-bottom: 3%;
@@ -937,7 +932,7 @@ body {
       }
    }
 
-   .sectionContact {
+   .section-contact {
       display: flex;
       flex-direction: row;
       width: 60%;
