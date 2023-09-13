@@ -448,6 +448,23 @@ body {
 .section-contact__form__name--margin-bottom-32, .section-contact__form__email--margin-bottom-32 {
   margin-bottom: 32px;
 }
+.section-contact__form__button {
+  text-align: right;
+}
+.section-contact__form__button__style {
+  height: 57px;
+  width: 226px;
+  background-color: #08A6E4;
+  color: #FFFFFF;
+  border: 1px solid #08A6E4;
+  border-radius: 35px;
+  font-size: 13px;
+  font-family: Open Sans;
+  font-weight: 700;
+  line-height: 18px;
+  box-shadow: 5px 10px 14px #07ACE6;
+  margin-bottom: 44px;
+}
 .section-contact__form__protection input[type=checkbox] {
   display: none;
 }
@@ -474,23 +491,6 @@ body {
   font-family: Open Sans;
   line-height: 16px;
   margin-bottom: 33px;
-}
-.section-contact__form__protection__button {
-  text-align: right;
-}
-.section-contact__form__protection__button__style {
-  height: 57px;
-  width: 226px;
-  background-color: #08A6E4;
-  color: #FFFFFF;
-  border: 1px solid #08A6E4;
-  border-radius: 35px;
-  font-size: 13px;
-  font-family: Open Sans;
-  font-weight: 700;
-  line-height: 18px;
-  box-shadow: 5px 10px 14px #07ACE6;
-  margin-bottom: 44px;
 }
 
 .footer {
