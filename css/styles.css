@@ -12,6 +12,14 @@ body {
   min-width: 320px;
 }
 
+#scroll-percentage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #08A6E4;
+}
+
 .header {
   width: 100%;
 }
