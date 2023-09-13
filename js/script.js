@@ -22,3 +22,12 @@ function closeMenu(){
     menu.classList.remove("header__content__nav--opened");
     menu.classList.add("header__content__nav--closed");
 }
+
+window.addEventListener("scroll", function(){
+
+    let widthMaxSize = document.documentElement.scrollHeight - window.innerHeight;
+    let actualWidth = this.window.scrollY;
+    let scrollBar = this.document.getElementById("scroll-percentage");
+
+    scrollBar.style.width = (actualWidth / widthMaxSize) * 100+'%';
+});
