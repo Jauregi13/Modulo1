@@ -9,11 +9,11 @@
         <header class="header header--shadow">
             <div class="header__content">
                 <h2 class="header__content__logo header__content__logo--blue">OXYGENShop</h2>
-                <div class="header__content__button-menu header__button-menu--blue">
-                    <input type="checkbox" id="menu" class="header__content__button-menu__checkbox" />
-                    <label for="menu" class="header__content__button-menu__label header__content__button-menu__label--blue">&#9776;</label>
+                <div class="header__content__button-menu header__content__button-menu--blue">
+                    <div id="menu-open" class="header__content__button-menu__open header__content__button-menu__open--open-menu-actived">&#9776;</div>
+                    <div id="menu-close" class="header__content__button-menu__close">&times;</div>
                 </div>
-                <nav class="header__content__nav">
+                <nav class="header__content__nav header__content__nav--closed">
                     <ul>
                         <li class="header__content__nav__item header__content__nav__item--active">WHY US</li>
                         <li class="header__content__nav__item">BENEFITS</li>
@@ -269,4 +269,5 @@
 
         </footer>
     </body>
+    <script src="./js/script.js"></script>
 </html>

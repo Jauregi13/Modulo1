@@ -42,29 +42,32 @@ body {
    
       &__button-menu {
          display: inline-block;
-         
 
-         &__checkbox {
-            position: absolute;
-            left: -9999px;
-         }
-
-         &__label {
+         &__open, &__close {
+            display: none;
             position: absolute; 
             top: 0.8em;
             right: 2em;
             font-size: 25px;
 
-            &--blue {
-               color: $secondary_color;
+            &--open-menu-actived {
+               display: block;
+            }
+
+            &--close-menu-actived {
+               display: block;
             }
          }
+         &--blue {
+            color: $secondary_color;
+         }
+
+         
       }
 
       &__nav {
-         display: none;
          padding-top: 40px;
-         margin-left: 25px;
+         margin-left: 6%;
    
          &__item {
             font-size: 11px;
@@ -79,6 +82,14 @@ body {
             &--active {
                color: #000000;
             }
+         }
+
+         &--closed {
+            display: none;
+         }
+
+         &--opened {
+            display: block;
          }
       }
    }
@@ -699,9 +710,11 @@ body {
 
          &__button-menu {
 
-            &__label {
+            &__open, &__close {
                display: none;
             }
+
+      
          }
 
          &__nav{
