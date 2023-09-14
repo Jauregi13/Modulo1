@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Raleway;
+  font-family: "Raleway";
   font-weight: 400;
   font-size: 0;
 }
@@ -69,7 +69,7 @@ body {
   font-weight: 700;
   line-height: 15px;
   letter-spacing: 3px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   list-style: none;
   margin-bottom: 14px;
   color: #A5A5A5;
@@ -100,7 +100,7 @@ body {
 }
 .section-introduction__paragraph {
   font-size: 16px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   margin-bottom: 28px;
 }
 .section-introduction__button {
@@ -115,7 +115,7 @@ body {
 }
 .section-introduction__button--text {
   font-size: 16px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-weight: 700;
 }
 
@@ -238,7 +238,7 @@ body {
   line-height: 35px;
 }
 .section4__column1__text__parag, .section4__column1__element1__text__parag, .section4__column2__text__parag, .section4__column2__element1__text__parag, .section4__column3__text__parag, .section4__column3__element1__text__parag {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 30px;
@@ -332,7 +332,7 @@ body {
 .section-prices__price1__type__number, .section-prices__price2__type__number, .section-prices__price3__type__number {
   font-size: 46px;
   font-weight: 300;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   line-height: 64px;
 }
 .section-prices__price1__type__number--red, .section-prices__price2__type__number--red, .section-prices__price3__type__number--red {
@@ -386,7 +386,7 @@ body {
   top: 2em;
   border-radius: 23px;
   font-size: 13px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-weight: 700;
   line-height: 18px;
   color: #FFFFFF;
@@ -416,7 +416,7 @@ body {
   line-height: 47px;
 }
 .section-contact__info__text {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 38px;
@@ -434,7 +434,7 @@ body {
   font-size: 16px;
   color: #A5A5A5;
   font-weight: 600;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   line-height: 22px;
   vertical-align: text-bottom;
 }
@@ -445,7 +445,7 @@ body {
   display: block;
   font-size: 11px;
   font-weight: 600;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   line-height: 15px;
   letter-spacing: 3px;
   color: #08A6E4;
@@ -476,7 +476,7 @@ body {
   border: 1px solid #08A6E4;
   border-radius: 35px;
   font-size: 13px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-weight: 700;
   line-height: 18px;
   box-shadow: 5px 10px 14px #07ACE6;
@@ -505,7 +505,7 @@ body {
   width: 82%;
   display: inline-block;
   font-size: 12px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   line-height: 16px;
   margin-bottom: 33px;
 }
@@ -528,7 +528,7 @@ body {
 }
 .footer__content__info__text {
   font-size: 11px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   line-height: 15px;
   color: #A5A5A5;
 }
