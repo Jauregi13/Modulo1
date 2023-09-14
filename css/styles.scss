@@ -578,6 +578,10 @@ body {
             border-radius: unset;
             border-bottom: 1px solid #95989A;
             font-size: 15px;
+
+            &--not-valid {
+               border: 1px solid $red_color;
+            }
          }
 
          &__input:focus {
