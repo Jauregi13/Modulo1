@@ -459,6 +459,9 @@ body {
   border-bottom: 1px solid #95989A;
   font-size: 15px;
 }
+.section-contact__form__name__input--not-valid, .section-contact__form__email__input--not-valid {
+  border: 1px solid #FB3B64;
+}
 .section-contact__form__name__input:focus, .section-contact__form__email__input:focus {
   outline: none;
 }
