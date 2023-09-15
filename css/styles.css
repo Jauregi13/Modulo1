@@ -513,6 +513,19 @@ body {
   margin-bottom: 33px;
 }
 
+.button-return-top {
+  background-color: #08A6E4;
+  color: #FFFFFF;
+  border: 1px solid #08A6E4;
+  border-radius: 35px;
+  width: 11em;
+  height: 50px;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .footer {
   box-shadow: 0 -5px 40px -20px #000000;
 }
