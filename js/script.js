@@ -67,7 +67,29 @@ function validateForm(){
         formValid = false;
     }
 
-    return formValid;
+    if(formValid){
+        sendFormInformation(name.value,email.value)
+    }
 
+}
+
+async function sendFormInformation(name,email){
+
+    if(validateForm){
+        let data = await fetch('https://jsonplaceholder.typicode.com/posts/1/comments',{
+            method: 'POST',
+            body: JSON.stringify({
+                "postId":1,
+                "id":6,
+                "name": name,
+                "email":email,
+                "body": "fadfadsfsgadfgadfgdg"
+
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              }
+        })
+    }
 }
 
