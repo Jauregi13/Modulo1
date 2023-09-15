@@ -652,8 +652,20 @@ body {
          }
       }
    }
+}
 
-   
+.button-return-top {
+   background-color: $primary_color;
+   color: #FFFFFF;
+   border: 1px solid $primary_color;
+   border-radius: 35px;
+   width: 11em;
+   height: 50px;
+   margin-bottom: 5%;
+   margin-left: 5%;
+   font-size: 13px;
+   font-weight: 700;
+
 }
 
 .footer {

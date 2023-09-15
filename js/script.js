@@ -3,10 +3,15 @@ const menu_open = document.getElementById('menu-open');
 const menu_close = document.getElementById('menu-close');
 const menu = document.getElementsByClassName('header__content__nav')[0];
 const button_form = document.getElementById('contact-form');
+const button_returnTop = document.getElementById('returnTop');
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
+
+button_returnTop.addEventListener("click",function(){
+    setTimeout(returnTop,200);
+});
 button_form.addEventListener("submit", function(event){
     event.preventDefault();
     validateForm();
@@ -36,6 +41,23 @@ function closeMenu(){
     menu_open.classList.add("header__content__button-menu__open--open-menu-actived");
     menu.classList.remove("header__content__nav--opened");
     menu.classList.add("header__content__nav--closed");
+}
+
+function returnTop(){
+
+    let animationId;
+
+    if(window.scrollY != 0){
+
+        window.scrollBy(0,-10);
+
+        animationId = window.requestAnimationFrame(returnTop);
+
+    }
+    else {
+        window.cancelAnimationFrame(animationId);
+    }
+   
 }
 
 function validateForm(){
