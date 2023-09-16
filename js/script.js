@@ -4,10 +4,15 @@ const menu_close = document.getElementById('menu-close');
 const menu = document.getElementsByClassName('header__content__nav')[0];
 const button_form = document.getElementById('contact-form');
 const button_returnTop = document.getElementById('returnTop');
+const modal = document.getElementById('modal');
+const modal_background = document.getElementById('modal-background');
+
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
+
+
 
 button_returnTop.addEventListener("click",function(){
     setTimeout(returnTop,200);
@@ -22,8 +27,20 @@ window.addEventListener("scroll", function(){
     let widthMaxSize = document.documentElement.scrollHeight - window.innerHeight;
     let actualWidth = this.window.scrollY;
     let scrollBar = this.document.getElementById("scroll-percentage");
+    let scrollPercentage = (actualWidth / widthMaxSize) * 100;
 
-    scrollBar.style.width = (actualWidth / widthMaxSize) * 100+'%';
+    scrollBar.style.width = scrollPercentage + '%';
+
+    if(scrollPercentage >= 25){
+        this.document.getElementById("modal").style.display = "block";
+    }
+});
+
+window.addEventListener("click",function(event){
+    console.log(event.target);
+    if(event.target === modal_background){
+        modal.style.display = "none";
+    }
 });
 
 function openMenu(){
