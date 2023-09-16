@@ -13,7 +13,6 @@ menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
 
 
-
 button_returnTop.addEventListener("click",function(){
     setTimeout(returnTop,200);
 });
@@ -32,15 +31,19 @@ window.addEventListener("scroll", function(){
     scrollBar.style.width = scrollPercentage + '%';
 
     if(scrollPercentage >= 25){
-        this.document.getElementById("modal").style.display = "block";
+        openModal();
     }
 });
 
 window.addEventListener("click",function(event){
     console.log(event.target);
     if(event.target === modal_background){
-        modal.style.display = "none";
+        closeModal();
     }
+});
+
+window.addEventListener("load",function(){
+    this.setTimeout(openModal,5000);
 });
 
 function openMenu(){
@@ -108,5 +111,13 @@ function validateForm(){
 
     return formValid;
 
+}
+
+function openModal(){
+    modal.style.display = "block";
+}
+
+function closeModal(){
+    modal.style.display = "none";
 }
 
