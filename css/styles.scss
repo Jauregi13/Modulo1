@@ -76,7 +76,7 @@ body {
 
          &__input {
             display: block;
-            width: 100%;
+            width: 75%;
             height: 30px;
             border: none;
             border-radius: unset;
@@ -100,6 +100,14 @@ body {
             border: 1px solid $primary_color;
             border-radius: 15px;
          }
+      }
+
+      &__close {
+         position: absolute;
+         top: 4%;
+         right: 4%;
+         font-size: 13px;
+         font-weight: 700;
       }
 
    }

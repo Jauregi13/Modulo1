@@ -6,6 +6,7 @@ const button_form = document.getElementById('contact-form');
 const button_returnTop = document.getElementById('returnTop');
 const modal = document.getElementById('modal');
 const modal_background = document.getElementById('modal-background');
+const close_modal = document.getElementById('close_modal');
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -16,10 +17,16 @@ menu_close.addEventListener("click", closeMenu);
 button_returnTop.addEventListener("click",function(){
     setTimeout(returnTop,200);
 });
+
+// Listener que efectúa la validación del formulario
+
 button_form.addEventListener("submit", function(event){
     event.preventDefault();
     validateForm();
 });
+
+
+// Abrir el modal para subscribirse al newsletter
 
 window.addEventListener("scroll", function(){
 
@@ -35,6 +42,12 @@ window.addEventListener("scroll", function(){
     }
 });
 
+window.addEventListener("load",function(){
+    this.setTimeout(openModal,5000);
+});
+
+// Cerrar el modal
+
 window.addEventListener("click",function(event){
     console.log(event.target);
     if(event.target === modal_background){
@@ -42,9 +55,17 @@ window.addEventListener("click",function(event){
     }
 });
 
-window.addEventListener("load",function(){
-    this.setTimeout(openModal,5000);
-});
+close_modal.addEventListener("click",closeModal);
+
+window.addEventListener("keydown",(event) => {
+    console.log(event.key);
+    if(event.key === "Escape"){
+        closeModal();
+    }
+})
+
+
+// Abrir menu desplegable
 
 function openMenu(){
 
@@ -55,6 +76,8 @@ function openMenu(){
 
 }
 
+// Cerrar menu desplegable
+
 function closeMenu(){
 
     menu_close.classList.remove("header__content__button-menu__close--close-menu-actived");
@@ -62,6 +85,8 @@ function closeMenu(){
     menu.classList.remove("header__content__nav--opened");
     menu.classList.add("header__content__nav--closed");
 }
+
+// Funcionalidad ir hacia el principio de la página
 
 function returnTop(){
 
@@ -79,6 +104,8 @@ function returnTop(){
     }
    
 }
+
+// Validar el formulario con el nombre, email y el checkbox
 
 function validateForm(){
 
@@ -113,9 +140,18 @@ function validateForm(){
 
 }
 
+// Función para abrir el modal
+
 function openModal(){
-    modal.style.display = "block";
+
+    if(sessionStorage.getItem("openModal") != "true"){
+        sessionStorage.setItem("openModal","true");
+        modal.style.display = "block";
+    }
+    
 }
+
+// Función para cerrar el modal
 
 function closeModal(){
     modal.style.display = "none";

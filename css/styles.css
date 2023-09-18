@@ -66,7 +66,7 @@ body {
 }
 .pop-up-modal__content__form__input {
   display: block;
-  width: 100%;
+  width: 75%;
   height: 30px;
   border: none;
   border-radius: unset;
@@ -87,6 +87,13 @@ body {
   color: #FFFFFF;
   border: 1px solid #08A6E4;
   border-radius: 15px;
+}
+.pop-up-modal__content__close {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .header {
