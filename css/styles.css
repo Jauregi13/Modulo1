@@ -21,6 +21,81 @@ body {
   z-index: 1;
 }
 
+.pop-up-modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+.pop-up-modal__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 3;
+}
+.pop-up-modal__content {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 80%;
+  top: 50%;
+  height: 180px;
+  margin: 0 auto;
+  vertical-align: middle;
+  border: 4px solid #08A6E4;
+  border-radius: 15px;
+  z-index: 4;
+}
+.pop-up-modal__content__title {
+  font-size: 17px;
+  padding-top: 1em;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.pop-up-modal__content__form {
+  width: 60%;
+  margin: 0 auto;
+}
+.pop-up-modal__content__form__label {
+  display: block;
+  font-size: 11px;
+  color: #08A6E4;
+}
+.pop-up-modal__content__form__input {
+  display: block;
+  width: 75%;
+  height: 30px;
+  border: none;
+  border-radius: unset;
+  border-bottom: 1px solid #95989A;
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+.pop-up-modal__content__form__input:focus {
+  outline: none;
+}
+.pop-up-modal__content__form__button {
+  display: block;
+  width: 40%;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #08A6E4;
+  color: #FFFFFF;
+  border: 1px solid #08A6E4;
+  border-radius: 15px;
+}
+.pop-up-modal__content__close {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .header {
   width: 100%;
 }
@@ -462,7 +537,7 @@ body {
 .section-contact__form__name__input--not-valid, .section-contact__form__email__input--not-valid {
   border: 1px solid #FB3B64;
 }
-.section-contact__form__name__input:focus, .section-contact__form__email__input:focus {
+.section-contact__form__name__input:focus, .section-contact__form__name .pop-up-modal__content__input:focus, .section-contact__form__email__input:focus, .section-contact__form__email .pop-up-modal__content__input:focus {
   outline: none;
 }
 .section-contact__form__name--margin-bottom-32, .section-contact__form__email--margin-bottom-32 {
@@ -511,6 +586,19 @@ body {
   font-family: "Open Sans";
   line-height: 16px;
   margin-bottom: 33px;
+}
+
+.button-return-top {
+  background-color: #08A6E4;
+  color: #FFFFFF;
+  border: 1px solid #08A6E4;
+  border-radius: 35px;
+  width: 11em;
+  height: 50px;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .footer {
