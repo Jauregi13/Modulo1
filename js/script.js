@@ -10,6 +10,8 @@ const close_modal = document.getElementById('close_modal');
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+
+
 menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
 
@@ -136,8 +138,40 @@ function validateForm(){
         formValid = false;
     }
 
-    return formValid;
+    if(formValid){
+        sendFormInformation(name,email,checkbox);
+    }
 
+}
+
+async function sendFormInformation(name,email,checkbox){
+
+    if(validateForm){
+        let data = await fetch('https://jsonplaceholder.typicode.com/posts/1/comments',{
+            method: 'POST',
+            body: JSON.stringify({
+                "postId":1,
+                "id":6,
+                "name": name.value,
+                "email":email.value,
+                "body": "Esto es una prueba"
+
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              }
+        });
+
+        console.log(data);
+
+        if(data.status >= 200 && data.status < 300){
+            name.value = '';
+            email.value = '';
+            checkbox.checked = false;
+
+
+        }
+    }
 }
 
 // Función para abrir el modal
