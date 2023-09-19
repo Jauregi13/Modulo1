@@ -3,7 +3,10 @@ const menu_open = document.getElementById('menu-open');
 const menu_close = document.getElementById('menu-close');
 const menu = document.getElementsByClassName('header__content__nav')[0];
 const button_form = document.getElementById('contact-form');
+
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
 
 menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
@@ -68,12 +71,12 @@ function validateForm(){
     }
 
     if(formValid){
-        sendFormInformation(name.value,email.value)
+        sendFormInformation(name,email,checkbox);
     }
 
 }
 
-async function sendFormInformation(name,email){
+async function sendFormInformation(name,email,checkbox){
 
     if(validateForm){
         let data = await fetch('https://jsonplaceholder.typicode.com/posts/1/comments',{
@@ -81,15 +84,25 @@ async function sendFormInformation(name,email){
             body: JSON.stringify({
                 "postId":1,
                 "id":6,
-                "name": name,
-                "email":email,
-                "body": "fadfadsfsgadfgadfgdg"
+                "name": name.value,
+                "email":email.value,
+                "body": "Esto es una prueba"
 
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
               }
-        })
+        });
+
+        console.log(data);
+
+        if(data.status >= 200 && data.status < 300){
+            name.value = '';
+            email.value = '';
+            checkbox.checked = false;
+
+
+        }
     }
 }
 
