@@ -176,7 +176,7 @@ async function sendFormInformation(name,email,checkbox){
 
         console.log(data);
 
-        if(data.status >= 200 && data.status < 300){
+        if(data.ok){
             name.value = '';
             email.value = '';
             checkbox.checked = false;
@@ -240,6 +240,11 @@ async function changeCurrency(currency){
         
         case 'gbp':
 
+            premium_price = Math.round(premium_price * currency_value.gbp);
+            premium_symbol = '&pound;';
+
+            pro_price = Math.round(pro_price * currency_value.gbp);
+            pro_symbol = '&pound;';
 
     }
 
