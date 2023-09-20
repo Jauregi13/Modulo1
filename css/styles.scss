@@ -625,6 +625,43 @@ body {
    
 }
 
+.slider-container {
+
+   width: 100%;
+   margin: 0 auto;
+   position: relative;
+   margin-bottom: 5%;
+
+   &__slide {
+      width: 100%;
+      display: block;
+   }
+
+   &__slide img {
+      width: 100%;
+   }
+
+   &__next, &__prev {
+      position: absolute;
+      top: 50%;
+      font-size: 15px;
+      width: 2em;
+      border: 1px solid #FFFFFF;
+      border-radius: 20px;
+      color: #FFFFFF;
+      background-color: #95989A;
+   }
+
+   &__next {
+      right: 2%;
+   }
+
+   &__prev {
+      left: 2%;
+   }
+
+}
+
 .section-contact {
 
    width: 80%;

@@ -500,6 +500,36 @@ body {
   background-color: #55DFB4;
 }
 
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 5%;
+}
+.slider-container__slide {
+  width: 100%;
+  display: block;
+}
+.slider-container__slide img {
+  width: 100%;
+}
+.slider-container__next, .slider-container__prev {
+  position: absolute;
+  top: 50%;
+  font-size: 15px;
+  width: 2em;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: #95989A;
+}
+.slider-container__next {
+  right: 2%;
+}
+.slider-container__prev {
+  left: 2%;
+}
+
 .section-contact {
   width: 80%;
   margin: 0 auto;

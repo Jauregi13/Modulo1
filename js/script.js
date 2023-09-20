@@ -1,4 +1,3 @@
-
 const menu_open = document.getElementById('menu-open');
 const menu_close = document.getElementById('menu-close');
 const menu = document.getElementsByClassName('header__content__nav')[0];
