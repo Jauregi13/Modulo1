@@ -508,6 +508,9 @@ body {
 }
 .slider-container__slide {
   width: 100%;
+  display: none;
+}
+.slider-container__slide--active {
   display: block;
 }
 .slider-container__slide img {

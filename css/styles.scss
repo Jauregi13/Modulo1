@@ -634,7 +634,10 @@ body {
 
    &__slide {
       width: 100%;
-      display: block;
+      display: none;
+      &--active {
+         display: block;
+      }
    }
 
    &__slide img {
