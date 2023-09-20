@@ -369,6 +369,27 @@ body {
 .section-prices {
   padding-top: 53px;
 }
+.section-prices__currency {
+  margin: 0 auto;
+  width: 75%;
+}
+.section-prices__currency__label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+.section-prices__currency__select {
+  width: 5em;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.section-prices__currency__select option {
+  background-color: #FFFFFF;
+  font-size: 15px;
+}
+.section-prices__currency__select option:checked {
+  background-color: #08A6E4;
+}
 .section-prices__title {
   text-align: center;
   font-size: 36px;

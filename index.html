@@ -116,6 +116,16 @@
 
         <section class="section-prices">
 
+            <div class="section-prices__currency">
+                <label class="section-prices__currency__label">Choose a currency:</label>
+                <select class="section-prices__currency__select" id="currency">
+                    <option value="eur">EUR</option>
+                    <option value="usd" selected>USD</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </div>
+            
+
             <h2 class="section-prices__title">Pricing</h2>
             
             <div class="section-prices__price1 section-prices__price1--red">
@@ -156,7 +166,7 @@
 
                 <div class="section-prices__price2__type">
                     <h3 class="section-prices__price2__type__title">Professional</h3>
-                    <p class="section-prices__price2__type__number section-prices__price2__type__number--blue">$25</p>
+                    <p class="section-prices__price2__type__number section-prices__price2__type__number--blue" id="profesional_price">$25</p>
                     <p class="section-prices__price2__type__text">Limited offer</p>
 
                 </div>
@@ -192,7 +202,7 @@
 
                 <div class="section-prices__price3__type">
                     <h3 class="section-prices__price3__type__title">Premium</h3>
-                    <p class="section-prices__price3__type__number section-prices__price3__type__number--green">$60</p>
+                    <p class="section-prices__price3__type__number section-prices__price3__type__number--green" id="premium_price">$60</p>
                     <p class="section-prices__price3__type__text">Limited offer</p>
                 </div>
 

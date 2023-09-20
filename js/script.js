@@ -8,6 +8,15 @@ const modal = document.getElementById('modal');
 const modal_background = document.getElementById('modal-background');
 const close_modal = document.getElementById('close_modal');
 
+const select_currency = document.getElementById('currency');
+var actual_currency = 'usd';
+
+const premium = document.getElementById('premium_price');
+
+
+const profesional = document.getElementById('profesional_price');
+
+
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
@@ -15,6 +24,9 @@ const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+")
 menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
 
+select_currency.addEventListener("change", (event) => {
+    changeCurrency(event.target.value);
+})
 
 button_returnTop.addEventListener("click",function(){
     setTimeout(returnTop,200);
@@ -189,5 +201,51 @@ function openModal(){
 
 function closeModal(){
     modal.style.display = "none";
+}
+
+
+async function changeCurrency(currency){
+
+    let currency_response = (await fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/'+actual_currency+'/'+currency+'.json'));
+
+    let currency_value = await currency_response.json();
+
+    let premium_symbol = premium.innerHTML.substring(0,1);
+    let premium_price = premium.innerHTML.substring(1,premium.innerHTML.length);
+
+    let pro_symbol = profesional.innerHTML.substring(0,1);
+    let pro_price = profesional.innerHTML.substring(1,profesional.innerHTML.length);
+    
+
+    switch (currency) {
+        case 'usd':
+
+            premium_price = Math.round(premium_price * currency_value.usd) ;
+            premium_symbol = '$';
+
+            pro_price = Math.round(pro_price * currency_value.usd);
+            pro_symbol = '$';
+
+            break;
+    
+        case 'eur':
+
+            premium_price = Math.round(premium_price * currency_value.eur);
+            premium_symbol = '€';
+
+            pro_price = Math.round(pro_price * currency_value.eur);
+            pro_symbol = '€';
+            
+            break;
+        
+        case 'gbp':
+
+
+    }
+
+    premium.innerHTML = premium_symbol+premium_price;
+    profesional.innerHTML = pro_symbol+pro_price;
+
+    actual_currency = currency;
 }
 

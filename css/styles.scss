@@ -460,6 +460,33 @@ body {
 .section-prices {
 
    padding-top: 53px;
+
+   &__currency {
+      margin: 0 auto;
+      width: 75%;
+
+      &__label {
+         display: block;
+         font-size: 15px;
+         margin-bottom: 1em;
+      }
+
+      &__select {
+         width: 5em;
+         font-size: 20px;
+         border-radius: 10px;
+      }
+
+      &__select option {
+         background-color: #FFFFFF;
+         font-size: 15px;
+      }
+
+      &__select option:checked {
+         background-color: $primary_color;
+      }
+      
+   }
    
    
 
