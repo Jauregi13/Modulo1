@@ -4,6 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <script src="./js/Slider.js" defer></script>
+        <script src="./js/script.js" defer></script>
         <title>Oxygen Shop</title>
     </head>
     <body>
@@ -234,6 +237,34 @@
             </div>
         </section>
 
+        <div class="slider-container" id="slider">
+
+            <button class="slider-container__next" id="slide_next">></button>
+            <button class="slider-container__prev" id="slide_prev"><</button>
+
+            <div class="slider-container__slide slider-container__slide--active">
+                <img src="./img/slide1.jpg" alt="slide1" />
+            </div>
+            <div class="slider-container__slide">
+                <img src="./img/slide2.jpg" alt="slide2"/>
+            </div>
+
+            <div class="slider-container__slide">
+                <img src="./img/slide3.jpg" alt="slide3"/>
+            </div>
+
+            <div class="slider-container__slide">
+                <img src="./img/slide4.jpg" alt="slide4"/>
+            </div>
+
+            <div class="slider-container__position">
+                <i class="fas fa-circle"></i>
+                <i class="far fa-circle"></i>
+                <i class="far fa-circle"></i>
+                <i class="far fa-circle"></i>
+            </div>
+        </div>
+
         <section class="section-contact">
 
             <div class="section-contact__info">
@@ -296,5 +327,4 @@
 
         </footer>
     </body>
-    <script src="./js/script.js"></script>
 </html>

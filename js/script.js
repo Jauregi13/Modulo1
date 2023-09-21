@@ -1,4 +1,3 @@
-
 const menu_open = document.getElementById('menu-open');
 const menu_close = document.getElementById('menu-close');
 const menu = document.getElementsByClassName('header__content__nav')[0];
@@ -7,6 +6,28 @@ const button_returnTop = document.getElementById('returnTop');
 const modal = document.getElementById('modal');
 const modal_background = document.getElementById('modal-background');
 const close_modal = document.getElementById('close_modal');
+
+const slider = new Slider('slider');
+const nextSlide = document.getElementById('slide_next');
+const prevSlide = document.getElementById('slide_prev');
+var intervalId = 0;
+
+nextSlide.addEventListener("click", ()=> {
+
+    slider.nextSlide();
+});
+
+prevSlide.addEventListener("click", () => {
+
+    slider.prevSlide();
+
+});
+
+window.addEventListener("load", () => {
+    
+   slider.automaticSlider();
+})
+
 
 const select_currency = document.getElementById('currency');
 var actual_currency = 'usd';
@@ -18,6 +39,7 @@ const profesional = document.getElementById('profesional_price');
 
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
 
 
