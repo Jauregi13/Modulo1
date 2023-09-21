@@ -10,6 +10,7 @@ const close_modal = document.getElementById('close_modal');
 const slider = new Slider('slider');
 const nextSlide = document.getElementById('slide_next');
 const prevSlide = document.getElementById('slide_prev');
+var intervalId = 0;
 
 nextSlide.addEventListener("click", ()=> {
 
@@ -21,6 +22,11 @@ prevSlide.addEventListener("click", () => {
     slider.prevSlide();
 
 });
+
+window.addEventListener("load", () => {
+    
+   slider.automaticSlider();
+})
 
 
 const select_currency = document.getElementById('currency');
