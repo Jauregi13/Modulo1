@@ -513,7 +513,7 @@ body {
   animation-duration: 3s;
   -webkit-animation-name: fadeSlide;
   -webkit-animation-duration: 3s;
-  -moz-animation-name: fadeSlid;
+  -moz-animation-name: fadeSlide;
   -moz-animation-duration: 3s;
 }
 .slider-container__slide--active {
@@ -695,14 +695,17 @@ body {
 
 .button-return-top {
   background-color: #08A6E4;
-  color: #FFFFFF;
   border: 1px solid #08A6E4;
-  border-radius: 35px;
-  width: 11em;
+  border-radius: 25px;
   height: 50px;
+  width: 10%;
   margin-bottom: 5%;
   margin-left: 5%;
-  font-size: 13px;
+}
+
+.button-return-top i {
+  color: #FFFFFF;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -946,6 +949,12 @@ body {
   }
   .section-contact__form__protection__text {
     width: 100%;
+  }
+  .button-return-top {
+    width: 7%;
+  }
+  .button-return-top i {
+    font-size: 25px;
   }
   .footer__content {
     width: 90%;
