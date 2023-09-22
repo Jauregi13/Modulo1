@@ -6,7 +6,7 @@ const button_returnTop = document.getElementById('returnTop');
 const modal = document.getElementById('modal');
 const modal_background = document.getElementById('modal-background');
 const close_modal = document.getElementById('close_modal');
-
+const button_newsletter = document.getElementById('submitNewsletter');
 const slider = new Slider('slider');
 const nextSlide = document.getElementById('slide_next');
 const prevSlide = document.getElementById('slide_prev');
@@ -98,7 +98,63 @@ window.addEventListener("keydown",(event) => {
     if(event.key === "Escape"){
         closeModal();
     }
-})
+});
+
+// Enviar la subscripción del newsletter
+
+button_newsletter.addEventListener("click",(event) => {
+    event.preventDefault();
+    submitNewsletter();
+});
+
+
+async function submitNewsletter(){
+
+    let email = document.getElementById('email_newsletter');
+
+    let emailValid = emailRegex.test(email.value);
+
+    let message_error = document.getElementById('message_error');
+    
+
+    if(emailValid){
+
+        let data = await fetch('https://jsonplaceholder.typicode.com/posts/1/comments',{
+            method: 'POST',
+            body: JSON.stringify({
+                "postId":1,
+                "id":6,
+                "name": 'Jon',
+                "email":email.value,
+                "body": "Esto es una prueba"
+
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              }
+        });
+
+        if(data.ok){
+            email.value = '';
+            message_error.style.display = 'none';
+            closeModal();
+        }
+        else {
+            
+            message_error.style.display = "block";
+            message_error.innerText = "Error al enviar los datos al servidor";
+        }
+    }
+    else {
+
+        let message_error = document.getElementById('message_error');
+        message_error.style.display = "block";
+        message_error.innerText = "El email que has introducido no es correcto";
+
+    }
+
+
+}
 
 
 // Abrir menu desplegable

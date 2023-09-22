@@ -47,46 +47,49 @@ body {
       position: relative;
       background-color: #FFFFFF;
       width: 80%;
-      top: 50%;
-      height: 180px;
+      top: 30%;
       margin: 0 auto;
       vertical-align: middle;
       border: 4px solid $primary_color;
       border-radius: 15px;
       z-index: 4;
+      padding-bottom: 3%;
 
       &__title {
          font-size: 17px;
          padding-top: 1em;
          text-align: center;
          font-weight: 700;
-         margin-bottom: 1em;
+         margin-bottom: 2em;
       }
 
       &__form {
          width: 60%;
          margin: 0 auto;
 
-         &__label {
-            display: block;
-            font-size: 11px;
-            color: $primary_color;
-            
-         }
+         &__email {
 
-         &__input {
-            display: block;
-            width: 75%;
-            height: 30px;
-            border: none;
-            border-radius: unset;
-            border-bottom: 1px solid #95989A;
-            font-size: 15px;
-            margin-bottom: 1em;
-         }
-
-         &__input:focus {
-            outline: none;
+            &__label {
+               display: block;
+               font-size: 11px;
+               color: $primary_color;
+               
+            }
+   
+            &__input {
+               display: block;
+               width: 90%;
+               height: 30px;
+               border: none;
+               border-radius: unset;
+               border-bottom: 1px solid #95989A;
+               font-size: 15px;
+               margin-bottom: 1em;
+            }
+   
+            &__input:focus {
+               outline: none;
+            }
          }
 
          &__button {
@@ -99,13 +102,20 @@ body {
             color: #FFFFFF;
             border: 1px solid $primary_color;
             border-radius: 15px;
+            margin-bottom: 1em;
+         }
+
+         &__message-error {
+            display: none;
+            color: $red_color;
+            font-size: 15px;
          }
       }
 
       &__close {
          position: absolute;
          top: 4%;
-         right: 4%;
+         right: 2%;
          font-size: 13px;
          font-weight: 700;
       }
@@ -936,6 +946,24 @@ body {
 }
 
 @media only screen and (min-width:1000px) {
+
+   .pop-up-modal {
+
+      &__content {
+         width: 60%;
+         padding-bottom: 2%;
+
+         &__form {
+
+            display: grid;
+            grid-template-columns: repeat(2,65%);
+
+            &__message-error {
+               grid-column: 1 / span 2;
+            }
+         }
+      }
+   }
    
    .header {
 

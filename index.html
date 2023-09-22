@@ -15,9 +15,12 @@
             <div class="pop-up-modal__content">
                 <h2 class="pop-up-modal__content__title">Subscribe to our newsletter</h2>
                 <form class="pop-up-modal__content__form">
-                    <label class="pop-up-modal__content__form__label">EMAIL</label>
-                    <input type="email" class="pop-up-modal__content__form__input"/>
+                    <div class="pop-up-modal__content__form__email">
+                        <label class="pop-up-modal__content__form__email__label">EMAIL</label>
+                        <input type="email" class="pop-up-modal__content__form__email__input" id="email_newsletter"/>
+                    </div> 
                     <input type="submit" id="submitNewsletter" value="Submit" class="pop-up-modal__content__form__button" />
+                    <p class="pop-up-modal__content__form__message-error" id="message_error"></p>
                 </form>
                 <div class="pop-up-modal__content__close" id="close_modal">X</div>
             </div>
