@@ -15,9 +15,12 @@
             <div class="pop-up-modal__content">
                 <h2 class="pop-up-modal__content__title">Subscribe to our newsletter</h2>
                 <form class="pop-up-modal__content__form">
-                    <label class="pop-up-modal__content__form__label">EMAIL</label>
-                    <input type="email" class="pop-up-modal__content__form__input"/>
+                    <div class="pop-up-modal__content__form__email">
+                        <label class="pop-up-modal__content__form__email__label">EMAIL</label>
+                        <input type="email" class="pop-up-modal__content__form__email__input" id="email_newsletter"/>
+                    </div> 
                     <input type="submit" id="submitNewsletter" value="Submit" class="pop-up-modal__content__form__button" />
+                    <p class="pop-up-modal__content__form__message-error" id="message_error"></p>
                 </form>
                 <div class="pop-up-modal__content__close" id="close_modal">X</div>
             </div>
@@ -135,7 +138,7 @@
 
                 <div class="section-prices__price1__type">
                     <h3 class="section-prices__price1__type__title">Basic</h3>
-                    <p class="section-prices__price1__type__number section-prices__price1__type__number--red">$0</p>
+                    <p class="section-prices__price1__type__number section-prices__price1__type__number--red" id="basic_price">$0</p>
 
                 </div>
 
@@ -303,10 +306,17 @@
                 <div class="section-contact__form__button">
                     <input type="submit" value="Send" class="section-contact__form__button__style" />
                 </div>
+
+                <div class="section-contact__form__message" id="message">
+                        
+                </div>
             </form>
+            
         </section>
 
-        <button class="button-return-top" id="returnTop">Return to the top</button>
+        <button class="button-return-top" id="returnTop">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
 
         <footer class="footer">
 
