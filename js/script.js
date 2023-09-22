@@ -191,6 +191,8 @@ button_form.addEventListener("submit", function(event){
     validateForm();
 });
 
+var message = document.getElementById('message');
+
 function validateForm(){
 
     let name = document.getElementById('name');
@@ -198,16 +200,19 @@ function validateForm(){
     let checkbox = document.getElementById('protection-check');
     let check_label = document.getElementById('check-label');
     let emailValid = emailRegex.test(email.value);
+    let formValid = true;
+    
 
     name.classList.remove('section-contact__form__email__input--not-valid');
     email.classList.remove('section-contact__form__email__input--not-valid');
     check_label.style.border = 'none';
 
-    let formValid = true;
+    
 
     if(name.value.length < 2 || name.value.length > 100){
         name.classList.add('section-contact__form__email__input--not-valid');
         formValid = false;
+
     }
 
     if(!emailValid){
@@ -222,6 +227,12 @@ function validateForm(){
 
     if(formValid){
         sendFormInformation(name,email,checkbox);
+    }
+    else {
+        message.style.display = 'block';
+        message.innerHTML = 'Algunos de los campos no es correcto';
+        message.classList.remove('section-contact__form__message--correct');
+        message.classList.add('section-contact__form__message--error');
     }
 
 }
@@ -248,6 +259,19 @@ async function sendFormInformation(name,email,checkbox){
             name.value = '';
             email.value = '';
             checkbox.checked = false;
+
+            message.innerHTML = 'La información se envió correctamente.'
+            message.classList.remove('section-contact__form__message--error');
+            message.classList.add('section-contact__form__message--correct');
+            message.style.display = 'block';
+
+            setTimeout(() => {
+                message.style.display = 'none';
+            },5000);
+        }
+
+        else {
+
         }
     }
 }
@@ -275,6 +299,7 @@ function closeModal(){
 const select_currency = document.getElementById('currency');
 const premium = document.getElementById('premium_price');
 const profesional = document.getElementById('profesional_price');
+const basic = document.getElementById('basic_price');
 
 var actual_currency = select_currency.value;
 var premium_price = premium.innerHTML.substring(1,premium.innerHTML.length);
@@ -286,15 +311,19 @@ select_currency.addEventListener("change", (event) => {
 
 async function changeCurrency(currency){
 
-    let currency_response = (await fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/'+actual_currency+'/'+currency+'.json'));
+    let currency_response = await fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/'+actual_currency+'/'+currency+'.json');
 
     let currency_value = await currency_response.json();
 
     let premium_symbol = premium.innerHTML.substring(0,1);
     let pro_symbol = profesional.innerHTML.substring(0,1);
+    let basic_symbol = basic.innerHTML.substring(0,1);
+
     
     switch (currency) {
         case 'usd':
+
+            basic_symbol = '$';
             
             premium_price *=  currency_value.usd;
             premium_symbol = '$';
@@ -306,6 +335,8 @@ async function changeCurrency(currency){
     
         case 'eur':
 
+            basic_symbol = '€';
+
             premium_price *= currency_value.eur;
             premium_symbol = '€';
 
@@ -316,6 +347,8 @@ async function changeCurrency(currency){
         
         case 'gbp':
 
+            basic_symbol = '&pound;';
+
             premium_price *= currency_value.gbp;
             premium_symbol = '&pound;';
 
@@ -323,7 +356,7 @@ async function changeCurrency(currency){
             pro_symbol = '&pound;';
 
     }
-
+    basic.innerHTML = basic_symbol+0;
     premium.innerHTML = premium_symbol+Math.round(premium_price);
     profesional.innerHTML = pro_symbol+Math.round(pro_price);
 

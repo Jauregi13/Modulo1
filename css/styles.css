@@ -670,7 +670,7 @@ body {
   font-weight: 700;
   line-height: 18px;
   box-shadow: 5px 10px 14px #07ACE6;
-  margin-bottom: 44px;
+  margin-bottom: 2em;
 }
 .section-contact__form__protection input[type=checkbox] {
   display: none;
@@ -698,6 +698,18 @@ body {
   font-family: "Open Sans";
   line-height: 16px;
   margin-bottom: 33px;
+}
+.section-contact__form__message {
+  display: none;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+.section-contact__form__message--error {
+  color: #FB3B64;
+}
+.section-contact__form__message--correct {
+  color: #55DFB4;
 }
 
 .button-return-top {
