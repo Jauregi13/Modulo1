@@ -905,6 +905,10 @@ body {
     text-align: center;
     margin-bottom: 3%;
   }
+  .section-prices__currency {
+    text-align: start;
+    width: 85%;
+  }
   .section-prices__title {
     margin-bottom: 50px;
   }

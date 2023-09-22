@@ -1,16 +1,9 @@
-const menu_open = document.getElementById('menu-open');
-const menu_close = document.getElementById('menu-close');
-const menu = document.getElementsByClassName('header__content__nav')[0];
-const button_form = document.getElementById('contact-form');
-const button_returnTop = document.getElementById('returnTop');
-const modal = document.getElementById('modal');
-const modal_background = document.getElementById('modal-background');
-const close_modal = document.getElementById('close_modal');
-const button_newsletter = document.getElementById('submitNewsletter');
+
+// Funcionamiento del slider
+
 const slider = new Slider('slider');
 const nextSlide = document.getElementById('slide_next');
 const prevSlide = document.getElementById('slide_prev');
-var intervalId = 0;
 
 nextSlide.addEventListener("click", ()=> {
 
@@ -29,40 +22,21 @@ window.addEventListener("load", () => {
 })
 
 
-const select_currency = document.getElementById('currency');
-var actual_currency = 'usd';
+// Volver hacia el inicio con animacion
 
-const premium = document.getElementById('premium_price');
-
-
-const profesional = document.getElementById('profesional_price');
-
-
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
-
-
-menu_open.addEventListener("click", openMenu);
-menu_close.addEventListener("click", closeMenu);
-
-select_currency.addEventListener("change", (event) => {
-    changeCurrency(event.target.value);
-})
+const button_returnTop = document.getElementById('returnTop');
 
 button_returnTop.addEventListener("click",function(){
     setTimeout(returnTop,200);
 });
 
-// Listener que efectúa la validación del formulario
-
-button_form.addEventListener("submit", function(event){
-    event.preventDefault();
-    validateForm();
-});
-
-
 // Abrir el modal para subscribirse al newsletter
+
+const modal = document.getElementById('modal');
+const modal_background = document.getElementById('modal-background');
+const close_modal = document.getElementById('close_modal');
+const button_newsletter = document.getElementById('submitNewsletter');
+
 
 window.addEventListener("scroll", function(){
 
@@ -156,8 +130,14 @@ async function submitNewsletter(){
 
 }
 
+// Menu desplegable
 
-// Abrir menu desplegable
+const menu_open = document.getElementById('menu-open');
+const menu_close = document.getElementById('menu-close');
+const menu = document.getElementsByClassName('header__content__nav')[0];
+
+menu_open.addEventListener("click", openMenu);
+menu_close.addEventListener("click", closeMenu);
 
 function openMenu(){
 
@@ -167,8 +147,6 @@ function openMenu(){
     menu.classList.add("header__content__nav--opened");
 
 }
-
-// Cerrar menu desplegable
 
 function closeMenu(){
 
@@ -197,7 +175,21 @@ function returnTop(){
    
 }
 
+
 // Validar el formulario con el nombre, email y el checkbox
+
+
+const button_form = document.getElementById('contact-form');
+
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+// Listener que efectúa la validación del formulario
+
+button_form.addEventListener("submit", function(event){
+    event.preventDefault();
+    validateForm();
+});
 
 function validateForm(){
 
@@ -278,6 +270,20 @@ function closeModal(){
 }
 
 
+// Selector de moneda
+
+const select_currency = document.getElementById('currency');
+const premium = document.getElementById('premium_price');
+const profesional = document.getElementById('profesional_price');
+
+var actual_currency = select_currency.value;
+var premium_price = premium.innerHTML.substring(1,premium.innerHTML.length);
+pro_price = profesional.innerHTML.substring(1,profesional.innerHTML.length);
+
+select_currency.addEventListener("change", (event) => {
+    changeCurrency(event.target.value);
+});
+
 async function changeCurrency(currency){
 
     let currency_response = (await fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/'+actual_currency+'/'+currency+'.json'));
@@ -285,45 +291,41 @@ async function changeCurrency(currency){
     let currency_value = await currency_response.json();
 
     let premium_symbol = premium.innerHTML.substring(0,1);
-    let premium_price = premium.innerHTML.substring(1,premium.innerHTML.length);
-
     let pro_symbol = profesional.innerHTML.substring(0,1);
-    let pro_price = profesional.innerHTML.substring(1,profesional.innerHTML.length);
     
-
     switch (currency) {
         case 'usd':
-
-            premium_price = Math.round(premium_price * currency_value.usd) ;
+            
+            premium_price *=  currency_value.usd;
             premium_symbol = '$';
 
-            pro_price = Math.round(pro_price * currency_value.usd);
+            pro_price *= currency_value.usd;
             pro_symbol = '$';
 
             break;
     
         case 'eur':
 
-            premium_price = Math.round(premium_price * currency_value.eur);
+            premium_price *= currency_value.eur;
             premium_symbol = '€';
 
-            pro_price = Math.round(pro_price * currency_value.eur);
+            pro_price *= currency_value.eur;
             pro_symbol = '€';
             
             break;
         
         case 'gbp':
 
-            premium_price = Math.round(premium_price * currency_value.gbp);
+            premium_price *= currency_value.gbp;
             premium_symbol = '&pound;';
 
-            pro_price = Math.round(pro_price * currency_value.gbp);
+            pro_price *= currency_value.gbp;
             pro_symbol = '&pound;';
 
     }
 
-    premium.innerHTML = premium_symbol+premium_price;
-    profesional.innerHTML = pro_symbol+pro_price;
+    premium.innerHTML = premium_symbol+Math.round(premium_price);
+    profesional.innerHTML = pro_symbol+Math.round(pro_price);
 
     actual_currency = currency;
 }

@@ -1162,6 +1162,12 @@ body {
 
       text-align: center;
       margin-bottom: 3%;
+
+      &__currency {
+         text-align: start;
+         width: 85%;
+      }
+
       &__title {
          margin-bottom: 50px;
       }
