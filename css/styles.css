@@ -510,11 +510,11 @@ body {
   width: 100%;
   display: none;
   animation-name: fadeSlide;
-  animation-duration: 3s;
+  animation-duration: 5s;
   -webkit-animation-name: fadeSlide;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 5s;
   -moz-animation-name: fadeSlide;
-  -moz-animation-duration: 3s;
+  -moz-animation-duration: 5s;
 }
 .slider-container__slide--active {
   display: block;
@@ -545,18 +545,19 @@ body {
 }
 .slider-container__slide img {
   width: 100%;
-  height: 260px;
+  background-size: auto;
 }
 .slider-container__next, .slider-container__prev {
   position: absolute;
   top: 50%;
-  font-size: 15px;
+  font-size: 3vh;
   width: 2em;
   border: 1px solid #FFFFFF;
   border-radius: 20px;
   color: #FFFFFF;
   background-color: #95989A;
   z-index: 1;
+  padding-bottom: 0.2em;
 }
 .slider-container__next {
   right: 2%;
@@ -567,7 +568,7 @@ body {
 .slider-container__position {
   display: flex;
   position: absolute;
-  left: 43%;
+  left: 45%;
   bottom: 2%;
   font-size: 10px;
   border: 1px solid #FFFFFF;
@@ -923,6 +924,15 @@ body {
   }
   .section-prices__price3:hover {
     box-shadow: 5px 10px 27px -10px #55DFB4;
+  }
+  .slider-container__slide img {
+    height: 600px;
+  }
+  .slider-container__position {
+    left: 47%;
+  }
+  .slider-container__next, .slider-container__prev {
+    font-size: 3.5vh;
   }
   .section-contact {
     display: flex;

@@ -196,14 +196,10 @@ async function sendFormInformation(name,email,checkbox){
               }
         });
 
-        console.log(data);
-
         if(data.ok){
             name.value = '';
             email.value = '';
             checkbox.checked = false;
-
-
         }
     }
 }
