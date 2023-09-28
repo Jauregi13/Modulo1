@@ -59,7 +59,6 @@ window.addEventListener("load",function(){
 // Cerrar el modal
 
 window.addEventListener("click",function(event){
-    console.log(event.target);
     if(event.target === modal_background){
         closeModal();
     }
@@ -68,7 +67,6 @@ window.addEventListener("click",function(event){
 close_modal.addEventListener("click",closeModal);
 
 window.addEventListener("keydown",(event) => {
-    console.log(event.key);
     if(event.key === "Escape"){
         closeModal();
     }
