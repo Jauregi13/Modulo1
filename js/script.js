@@ -1,14 +1,19 @@
-
-// Funcionamiento del slider
+/**
+ * ------------SLIDER-------------------
+ */
 
 const slider = new Slider('slider');
 const nextSlide = document.getElementById('slide_next');
 const prevSlide = document.getElementById('slide_prev');
 
+// Botón para el siguiente slide
+
 nextSlide.addEventListener("click", ()=> {
 
     slider.nextSlide();
 });
+
+// Botón para el anterior slide
 
 prevSlide.addEventListener("click", () => {
 
@@ -16,69 +21,68 @@ prevSlide.addEventListener("click", () => {
 
 });
 
+// Funcionamiento autómatico del slider
+
 window.addEventListener("load", () => {
     
    slider.automaticSlider();
-})
+});
 
 
-// Volver hacia el inicio con animacion
+/**
+ * ------------FUNCIONALIDAD RETURN TO THE TOP---------------------
+ */
 
 const button_returnTop = document.getElementById('returnTop');
+
+function returnTop(){
+
+    let animationId;
+
+    if(window.scrollY != 0){
+
+        window.scrollBy(0,-10);
+
+        animationId = window.requestAnimationFrame(returnTop);
+
+    }
+    else {
+        window.cancelAnimationFrame(animationId);
+    }
+   
+}
 
 button_returnTop.addEventListener("click",function(){
     setTimeout(returnTop,200);
 });
 
-// Abrir el modal para subscribirse al newsletter
+
+/**
+ * -----------------FUNCIONALIDAD SUBMIT NEWSLETTER------------------------
+ */
 
 const modal = document.getElementById('modal');
 const modal_background = document.getElementById('modal-background');
 const close_modal = document.getElementById('close_modal');
 const button_newsletter = document.getElementById('submitNewsletter');
 
+// Función para abrir el modal
 
-window.addEventListener("scroll", function(){
+function openModal(){
 
-    let widthMaxSize = document.documentElement.scrollHeight - window.innerHeight;
-    let actualWidth = this.window.scrollY;
-    let scrollBar = this.document.getElementById("scroll-percentage");
-    let scrollPercentage = (actualWidth / widthMaxSize) * 100;
-
-    scrollBar.style.width = scrollPercentage + '%';
-
-    if(scrollPercentage >= 25){
-        openModal();
+    if(sessionStorage.getItem("openModal") != "true"){
+        sessionStorage.setItem("openModal","true");
+        modal.style.display = "block";
     }
-});
+}
 
-window.addEventListener("load",function(){
-    this.setTimeout(openModal,5000);
-});
+// Función para cerrar el modal
 
-// Cerrar el modal
+function closeModal(){
+    modal.style.display = "none";
+}
 
-window.addEventListener("click",function(event){
-    if(event.target === modal_background){
-        closeModal();
-    }
-});
-
-close_modal.addEventListener("click",closeModal);
-
-window.addEventListener("keydown",(event) => {
-    if(event.key === "Escape"){
-        closeModal();
-    }
-});
-
-// Enviar la subscripción del newsletter
-
-button_newsletter.addEventListener("click",(event) => {
-    event.preventDefault();
-    submitNewsletter();
-});
-
+// Función para enviar el newsletter
 
 async function submitNewsletter(){
 
@@ -124,11 +128,54 @@ async function submitNewsletter(){
         message_error.innerText = "El email que has introducido no es correcto";
 
     }
-
-
 }
 
-// Menu desplegable
+// Abrir modal
+
+window.addEventListener("scroll", function(){
+
+    let widthMaxSize = document.documentElement.scrollHeight - window.innerHeight;
+    let actualWidth = this.window.scrollY;
+    let scrollBar = this.document.getElementById("scroll-percentage");
+    let scrollPercentage = (actualWidth / widthMaxSize) * 100;
+
+    scrollBar.style.width = scrollPercentage + '%';
+
+    if(scrollPercentage >= 25){
+        openModal();
+    }
+});
+
+window.addEventListener("load",function(){
+    this.setTimeout(openModal,5000);
+});
+
+// Cerrar el modal
+
+window.addEventListener("click",function(event){
+    if(event.target === modal_background){
+        closeModal();
+    }
+});
+
+close_modal.addEventListener("click",closeModal);
+
+window.addEventListener("keydown",(event) => {
+    if(event.key === "Escape"){
+        closeModal();
+    }
+});
+
+// Enviar la subscripción del newsletter
+
+button_newsletter.addEventListener("click",(event) => {
+    event.preventDefault();
+    submitNewsletter();
+});
+
+/**
+ * ---------------- MENU DESPLEGABLE--------------------------
+ */
 
 const menu_open = document.getElementById('menu-open');
 const menu_close = document.getElementById('menu-close');
@@ -136,6 +183,8 @@ const menu = document.getElementsByClassName('header__content__nav')[0];
 
 menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
+
+// Función abrir menú
 
 function openMenu(){
 
@@ -146,6 +195,8 @@ function openMenu(){
 
 }
 
+// Función cerrar menú
+
 function closeMenu(){
 
     menu_close.classList.remove("header__content__button-menu__close--close-menu-actived");
@@ -154,45 +205,19 @@ function closeMenu(){
     menu.classList.add("header__content__nav--closed");
 }
 
-// Funcionalidad ir hacia el principio de la página
-
-function returnTop(){
-
-    let animationId;
-
-    if(window.scrollY != 0){
-
-        window.scrollBy(0,-10);
-
-        animationId = window.requestAnimationFrame(returnTop);
-
-    }
-    else {
-        window.cancelAnimationFrame(animationId);
-    }
-   
-}
-
-
-// Validar el formulario con el nombre, email y el checkbox
-
+/**
+ * --------------VALIDAR FORMULARIO------------------
+ */
 
 const button_form = document.getElementById('contact-form');
 
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const message = document.getElementById('message');
 
-
-// Listener que efectúa la validación del formulario
-
-button_form.addEventListener("submit", function(event){
-    event.preventDefault();
-    validateForm();
-});
-
-var message = document.getElementById('message');
+// Función para validar el formulario
 
 function validateForm(){
 
+    let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let name = document.getElementById('name');
     let email = document.getElementById('email');
     let checkbox = document.getElementById('protection-check');
@@ -235,6 +260,8 @@ function validateForm(){
 
 }
 
+// Función para enviar los datos del formulario
+
 async function sendFormInformation(name,email,checkbox){
 
     if(validateForm){
@@ -269,43 +296,40 @@ async function sendFormInformation(name,email,checkbox){
         }
 
         else {
-
+            message.innerHTML = 'La información no se pudo enviar. Error en el servidor.'
+            message.classList.remove('section-contact__form__message--error');
+            message.classList.add('section-contact__form__message--correct');
+            message.style.display = 'block';
         }
     }
 }
 
-// Función para abrir el modal
+// Listener que efectúa la validación del formulario
 
-function openModal(){
-
-    if(sessionStorage.getItem("openModal") != "true"){
-        sessionStorage.setItem("openModal","true");
-        modal.style.display = "block";
-    }
-    
-}
-
-// Función para cerrar el modal
-
-function closeModal(){
-    modal.style.display = "none";
-}
+button_form.addEventListener("submit", function(event){
+    event.preventDefault();
+    validateForm();
+});
 
 
-// Selector de moneda
+/**
+ * --------------SELECTOR CURRENCY---------------------------
+ */
 
 const select_currency = document.getElementById('currency');
 const premium = document.getElementById('premium_price');
 const profesional = document.getElementById('profesional_price');
 const basic = document.getElementById('basic_price');
 
-var actual_currency = select_currency.value;
-var premium_price = premium.innerHTML.substring(1,premium.innerHTML.length);
-pro_price = profesional.innerHTML.substring(1,profesional.innerHTML.length);
+// Divisa actual 
+let actual_currency = select_currency.value;
 
-select_currency.addEventListener("change", (event) => {
-    changeCurrency(event.target.value);
-});
+// Cargar primeros valores de los precios
+let premium_price = premium.innerHTML.substring(1,premium.innerHTML.length);
+let pro_price = profesional.innerHTML.substring(1,profesional.innerHTML.length);
+
+
+// Función para cambiar los precios dependiendo la divisa
 
 async function changeCurrency(currency){
 
@@ -361,3 +385,6 @@ async function changeCurrency(currency){
     actual_currency = currency;
 }
 
+select_currency.addEventListener("change", (event) => {
+    changeCurrency(event.target.value);
+});
