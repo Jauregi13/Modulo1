@@ -331,6 +331,7 @@ body {
    background-color: #F7F7F7;
    padding-top: 42px;
    padding-bottom: 42px;
+   margin-bottom: 6%;
 
    &__column1, &__column2, &__column3 {
       width: 80%;
@@ -469,10 +470,11 @@ body {
 
 .section-prices {
 
-   padding-top: 53px;
+   text-align: center;
 
    &__currency {
-      margin: 0 auto;
+      margin: auto;
+      margin-bottom: 4%;
       width: 75%;
 
       &__label {
@@ -504,7 +506,7 @@ body {
       text-align: center;
       font-size: 36px;
       line-height: 42px;
-      margin-bottom: 14px;
+      margin-bottom: 1em;
    }
 
    &__price1, &__price2, &__price3 {
@@ -1060,8 +1062,6 @@ body {
 
    .section4 {
 
-      margin-bottom: 70px;
-
       &__column1, &__column2, &__column3{
          display: flex;
          height: 370px;
@@ -1175,16 +1175,10 @@ body {
 
    .section-prices {
 
-      text-align: center;
       margin-bottom: 3%;
 
       &__currency {
-         text-align: start;
          width: 85%;
-      }
-
-      &__title {
-         margin-bottom: 50px;
       }
 
       &__price1, &__price2, &__price3 {
