@@ -5,12 +5,14 @@
 const slider = new Slider('slider');
 const nextSlide = document.getElementById('slide_next');
 const prevSlide = document.getElementById('slide_prev');
-
+let intervalId = 0;
 // Botón para el siguiente slide
 
 nextSlide.addEventListener("click", ()=> {
 
     slider.nextSlide();
+    clearInterval(intervalId);
+    intervalId = slider.automaticSlider();
 });
 
 // Botón para el anterior slide
@@ -18,15 +20,14 @@ nextSlide.addEventListener("click", ()=> {
 prevSlide.addEventListener("click", () => {
 
     slider.prevSlide();
+    clearInterval(intervalId);
+    intervalId = slider.automaticSlider();
 
 });
 
 // Funcionamiento autómatico del slider
 
-window.addEventListener("load", () => {
-    
-   slider.automaticSlider();
-});
+intervalId = slider.automaticSlider();
 
 
 /**
