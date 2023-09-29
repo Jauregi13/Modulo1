@@ -57,6 +57,12 @@ button_returnTop.addEventListener("click",function(){
 });
 
 
+// Regex para validar los emails del formulario y el newsletter
+
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+
 /**
  * -----------------FUNCIONALIDAD SUBMIT NEWSLETTER------------------------
  */
@@ -72,14 +78,14 @@ function openModal(){
 
     if(sessionStorage.getItem("openModal") != "true"){
         sessionStorage.setItem("openModal","true");
-        modal.style.display = "block";
+        modal.classList.add('pop-up-modal--display');
     }
 }
 
 // Función para cerrar el modal
 
 function closeModal(){
-    modal.style.display = "none";
+    modal.classList.remove('pop-up-modal--display');
 }
 
 // Función para enviar el newsletter
@@ -112,28 +118,28 @@ async function submitNewsletter(){
 
         if(data.ok){
             email.value = '';
-            message_error.style.display = 'none';
+            message_error.classList.remove('pop-up-modal__content__form__message-error--display');
             closeModal();
         }
         else {
             
-            message_error.style.display = "block";
+            message_error.classList.add('pop-up-modal__content__form__message-error--display');
             message_error.innerText = "Error al enviar los datos al servidor";
         }
     }
     else {
 
-        let message_error = document.getElementById('message_error');
-        message_error.style.display = "block";
+        message_error.classList.add('pop-up-modal__content__form__message-error--display');
         message_error.innerText = "El email que has introducido no es correcto";
 
     }
 }
 
-// Abrir modal
+// Abrir modal y barra de progreso del scroll
 
 window.addEventListener("scroll", function(){
 
+    // Funcionalidad de la barra de progreso del scroll
     let widthMaxSize = document.documentElement.scrollHeight - window.innerHeight;
     let actualWidth = this.window.scrollY;
     let scrollBar = this.document.getElementById("scroll-percentage");
@@ -141,6 +147,7 @@ window.addEventListener("scroll", function(){
 
     scrollBar.style.width = scrollPercentage + '%';
 
+    // Abre el modal
     if(scrollPercentage >= 25){
         openModal();
     }
@@ -217,7 +224,6 @@ const message = document.getElementById('message');
 
 function validateForm(){
 
-    let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let name = document.getElementById('name');
     let email = document.getElementById('email');
     let checkbox = document.getElementById('protection-check');
@@ -228,7 +234,7 @@ function validateForm(){
 
     name.classList.remove('section-contact__form__email__input--not-valid');
     email.classList.remove('section-contact__form__email__input--not-valid');
-    check_label.style.border = 'none';
+    check_label.classList.remove('section-contact__form__protection__text--not-valid');
 
     
 
@@ -244,7 +250,7 @@ function validateForm(){
     }
 
     if(!checkbox.checked){
-        check_label.style.border = '1px solid #FB3B64';
+        check_label.classList.add('section-contact__form__protection__text--not-valid');
         formValid = false;
     }
 
@@ -252,7 +258,6 @@ function validateForm(){
         sendFormInformation(name,email,checkbox);
     }
     else {
-        message.style.display = 'block';
         message.innerHTML = 'Algunos de los campos no es correcto';
         message.classList.remove('section-contact__form__message--correct');
         message.classList.add('section-contact__form__message--error');
@@ -288,10 +293,9 @@ async function sendFormInformation(name,email,checkbox){
             message.innerHTML = 'La información se envió correctamente.'
             message.classList.remove('section-contact__form__message--error');
             message.classList.add('section-contact__form__message--correct');
-            message.style.display = 'block';
 
             setTimeout(() => {
-                message.style.display = 'none';
+                message.classList.remove('section-contact__form__message--correct');
             },5000);
         }
 
@@ -299,7 +303,6 @@ async function sendFormInformation(name,email,checkbox){
             message.innerHTML = 'La información no se pudo enviar. Error en el servidor.'
             message.classList.remove('section-contact__form__message--error');
             message.classList.add('section-contact__form__message--correct');
-            message.style.display = 'block';
         }
     }
 }
