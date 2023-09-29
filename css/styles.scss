@@ -34,6 +34,10 @@ body {
    width: 100%;
    height: 100%;
 
+   &--display {
+      display: block;
+   }
+
    &__background {
       position: fixed;
       width: 100%;
@@ -109,6 +113,10 @@ body {
             display: none;
             color: $red_color;
             font-size: 15px;
+
+            &--display {
+               display: block;
+            }
          }
       }
 
@@ -873,6 +881,10 @@ body {
             font-family: $font_secondary;
             line-height: 16px;
             margin-bottom: 33px;
+
+            &--not-valid {
+               border: 1px solid $red_color;
+            }
          }
       }
 
@@ -883,12 +895,16 @@ body {
          margin-bottom: 2em;
 
          &--error {
-            color: $red_color;
+               display: block;
+               color: $red_color;
+         }
+   
+         &--correct {
+               display: block;
+               color: $green_color;
          }
 
-         &--correct {
-            color: $green_color;
-         }
+         
       }
    }
 }

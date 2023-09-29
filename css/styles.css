@@ -28,6 +28,9 @@ body {
   width: 100%;
   height: 100%;
 }
+.pop-up-modal--display {
+  display: block;
+}
 .pop-up-modal__background {
   position: fixed;
   width: 100%;
@@ -93,6 +96,9 @@ body {
   display: none;
   color: #FB3B64;
   font-size: 15px;
+}
+.pop-up-modal__content__form__message-error--display {
+  display: block;
 }
 .pop-up-modal__content__close {
   position: absolute;
@@ -701,6 +707,9 @@ body {
   line-height: 16px;
   margin-bottom: 33px;
 }
+.section-contact__form__protection__text--not-valid {
+  border: 1px solid #FB3B64;
+}
 .section-contact__form__message {
   display: none;
   font-size: 12px;
@@ -708,9 +717,11 @@ body {
   margin-bottom: 2em;
 }
 .section-contact__form__message--error {
+  display: block;
   color: #FB3B64;
 }
 .section-contact__form__message--correct {
+  display: block;
   color: #55DFB4;
 }
 
