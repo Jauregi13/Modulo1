@@ -132,15 +132,26 @@ body {
 }
 
 .header {
+   
    width: 100%;
+
+   &--menu-open {
+      position: absolute;
+      top: 0;
+      height: 25vh;
+      z-index: 1;
+      background-color: #FFFFFF;
+   }
 
    &--shadow {
       box-shadow: 0 3px 9px -4px #000000;
    }
 
    &__content {
+      height: 10vh;
       display: block;
       padding-bottom: 10px;
+
 
       &__logo {
          display: inline-block;
@@ -180,29 +191,36 @@ body {
       }
 
       &__nav {
-         padding-top: 40px;
          margin-left: 6%;
+         padding-top: 40px;
    
-         &__item {
+         &__item a{
             font-size: 11px;
             font-weight: 700;
             line-height: 15px;
             letter-spacing: 3px;
             font-family: $font_secondary;
             list-style: none;
-            margin-bottom: 14px;
             color: #A5A5A5;
-
-            &--active {
-               color: #000000;
-            }
+            text-decoration: none;
          }
+
+         &__item a:hover {
+            color: #000000;
+         }
+
+         &__item--active a{
+            color: #000000;
+         }
+
+
 
          &--closed {
             display: none;
          }
 
          &--opened {
+            
             display: block;
          }
       }
@@ -1019,21 +1037,28 @@ body {
 
          &__nav{
             width: 50%;
+            height: inherit;
             display: flex;
-            padding-top: 30px;
+            padding-top: 0;
 
             &__item {
                display: flex;
                justify-content: center;
                width: 25%;
                margin-left: 30px;
+               align-items: center;
+
+               &--active {
+                  padding-top: 4px;
+                  border-bottom: 4px solid $primary_color;
+               }
             }
+
          }
 
          &__nav ul {
             width: 100%;
             display: flex;  
-            align-items: center;
          }
       }
 

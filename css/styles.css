@@ -111,10 +111,18 @@ body {
 .header {
   width: 100%;
 }
+.header--menu-open {
+  position: absolute;
+  top: 0;
+  height: 25vh;
+  z-index: 1;
+  background-color: #FFFFFF;
+}
 .header--shadow {
   box-shadow: 0 3px 9px -4px #000000;
 }
 .header__content {
+  height: 10vh;
   display: block;
   padding-bottom: 10px;
 }
@@ -148,20 +156,23 @@ body {
   color: #07ACE6;
 }
 .header__content__nav {
-  padding-top: 40px;
   margin-left: 6%;
+  padding-top: 40px;
 }
-.header__content__nav__item {
+.header__content__nav__item a {
   font-size: 11px;
   font-weight: 700;
   line-height: 15px;
   letter-spacing: 3px;
   font-family: "Open Sans";
   list-style: none;
-  margin-bottom: 14px;
   color: #A5A5A5;
+  text-decoration: none;
 }
-.header__content__nav__item--active {
+.header__content__nav__item a:hover {
+  color: #000000;
+}
+.header__content__nav__item--active a {
   color: #000000;
 }
 .header__content__nav--closed {
@@ -172,6 +183,7 @@ body {
 }
 
 .section-introduction {
+  position: relative;
   width: 100%;
   display: block;
   margin-top: 100px;
@@ -803,19 +815,24 @@ body {
   }
   .header__content__nav {
     width: 50%;
+    height: inherit;
     display: flex;
-    padding-top: 30px;
+    padding-top: 0;
   }
   .header__content__nav__item {
     display: flex;
     justify-content: center;
     width: 25%;
     margin-left: 30px;
+    align-items: center;
+  }
+  .header__content__nav__item--active {
+    padding-top: 4px;
+    border-bottom: 4px solid #08A6E4;
   }
   .header__content__nav ul {
     width: 100%;
     display: flex;
-    align-items: center;
   }
   .section-introduction__button {
     width: 440px;

@@ -188,7 +188,7 @@ button_newsletter.addEventListener("click",(event) => {
 const menu_open = document.getElementById('menu-open');
 const menu_close = document.getElementById('menu-close');
 const menu = document.getElementsByClassName('header__content__nav')[0];
-
+const header = document.getElementsByClassName('header')[0];
 menu_open.addEventListener("click", openMenu);
 menu_close.addEventListener("click", closeMenu);
 
@@ -200,6 +200,7 @@ function openMenu(){
     menu_close.classList.add("header__content__button-menu__close--close-menu-actived");
     menu.classList.remove("header__content__nav--closed");
     menu.classList.add("header__content__nav--opened");
+    header.classList.add("header--menu-open");
 
 }
 
@@ -211,7 +212,26 @@ function closeMenu(){
     menu_open.classList.add("header__content__button-menu__open--open-menu-actived");
     menu.classList.remove("header__content__nav--opened");
     menu.classList.add("header__content__nav--closed");
+    header.classList.remove("header--menu-open");
 }
+
+/**
+ * ----------------CAMBIO DE ITEM DEL MENU-----------------
+ */
+
+const navbarItems = document.querySelectorAll('nav ul li');
+
+navbarItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+
+        navbarItems.forEach((item) => {
+            item.classList.remove('header__content__nav__item--active');
+        })
+
+        item.classList.add('header__content__nav__item--active');
+
+    })
+})
 
 /**
  * --------------VALIDAR FORMULARIO------------------
