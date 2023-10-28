@@ -540,6 +540,7 @@ body {
       border-radius: 18px;
       margin: 0 auto;
       margin-bottom: 55px;
+      transition: transform 0.1s;
 
       &--red {
          border: 1px solid $red_color;
@@ -658,6 +659,22 @@ body {
          }
 
       }
+   }
+
+   &__price1:hover, &__price2:hover, &__price3:hover {
+      transform: scale(1.1);        
+   }
+
+   &__price1:hover {
+      box-shadow: 5px 10px 27px -10px $red_color;
+   }
+
+   &__price2:hover {
+      box-shadow: 5px 10px 27px -10px $secondary_color;
+   }
+
+   &__price3:hover {
+      box-shadow: 5px 10px 27px -10px $green_color;
    }
 
    
@@ -1216,7 +1233,7 @@ body {
 
    .section-prices {
 
-      margin-bottom: 3%;
+      padding-bottom: 3%;
 
       &__currency {
          width: 85%;
@@ -1226,6 +1243,7 @@ body {
          margin-right: 4%;
          margin-left: 4%;
          display: inline-block;
+         vertical-align: top;
          width: 23%;
 
          &__type {
@@ -1241,31 +1259,20 @@ body {
             margin: 0 auto;
             text-align: center;
             display: block;
+            width: 100%;
          }
       }
 
       &__price1 {
 
          &__type {
-            margin-bottom: 24%;
+            padding-bottom: 14px;
          }
       }
 
-      &__price1:hover, &__price2:hover, &__price3:hover {
-         width: 30%;         
-      }
+      
 
-      &__price1:hover {
-         box-shadow: 5px 10px 27px -10px $red_color;
-      }
 
-      &__price2:hover {
-         box-shadow: 5px 10px 27px -10px $secondary_color;
-      }
-
-      &__price3:hover {
-         box-shadow: 5px 10px 27px -10px $green_color;
-      }
    }
 
    .slider-container {

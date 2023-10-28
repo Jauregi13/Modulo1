@@ -183,7 +183,6 @@ body {
 }
 
 .section-introduction {
-  position: relative;
   width: 100%;
   display: block;
   margin-top: 100px;
@@ -427,6 +426,7 @@ body {
   border-radius: 18px;
   margin: 0 auto;
   margin-bottom: 55px;
+  transition: transform 0.1s;
 }
 .section-prices__price1--red, .section-prices__price2--red, .section-prices__price3--red {
   border: 1px solid #FB3B64;
@@ -524,6 +524,18 @@ body {
 .section-prices__price1__button--green, .section-prices__price2__button--green, .section-prices__price3__button--green {
   border: 1px solid #55DFB4;
   background-color: #55DFB4;
+}
+.section-prices__price1:hover, .section-prices__price2:hover, .section-prices__price3:hover {
+  transform: scale(1.1);
+}
+.section-prices__price1:hover {
+  box-shadow: 5px 10px 27px -10px #FB3B64;
+}
+.section-prices__price2:hover {
+  box-shadow: 5px 10px 27px -10px #07ACE6;
+}
+.section-prices__price3:hover {
+  box-shadow: 5px 10px 27px -10px #55DFB4;
 }
 
 .slider-container {
@@ -941,7 +953,7 @@ body {
     top: 52%;
   }
   .section-prices {
-    margin-bottom: 3%;
+    padding-bottom: 3%;
   }
   .section-prices__currency {
     width: 85%;
@@ -950,6 +962,7 @@ body {
     margin-right: 4%;
     margin-left: 4%;
     display: inline-block;
+    vertical-align: top;
     width: 23%;
   }
   .section-prices__price1__type, .section-prices__price2__type, .section-prices__price3__type {
@@ -964,21 +977,10 @@ body {
     margin: 0 auto;
     text-align: center;
     display: block;
+    width: 100%;
   }
   .section-prices__price1__type {
-    margin-bottom: 24%;
-  }
-  .section-prices__price1:hover, .section-prices__price2:hover, .section-prices__price3:hover {
-    width: 30%;
-  }
-  .section-prices__price1:hover {
-    box-shadow: 5px 10px 27px -10px #FB3B64;
-  }
-  .section-prices__price2:hover {
-    box-shadow: 5px 10px 27px -10px #07ACE6;
-  }
-  .section-prices__price3:hover {
-    box-shadow: 5px 10px 27px -10px #55DFB4;
+    padding-bottom: 14px;
   }
   .slider-container__slide img {
     height: 600px;
