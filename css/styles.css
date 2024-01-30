@@ -91,14 +91,19 @@ body {
   border: 1px solid #08A6E4;
   border-radius: 15px;
   margin-bottom: 1em;
+  cursor: pointer;
 }
-.pop-up-modal__content__form__message-error {
+.pop-up-modal__content__form__message {
   display: none;
-  color: #FB3B64;
   font-size: 15px;
 }
-.pop-up-modal__content__form__message-error--display {
+.pop-up-modal__content__form__message--error {
   display: block;
+  color: #FB3B64;
+}
+.pop-up-modal__content__form__message--correct {
+  display: block;
+  color: #55DFB4;
 }
 .pop-up-modal__content__close {
   position: absolute;
@@ -707,6 +712,10 @@ body {
   line-height: 18px;
   box-shadow: 5px 10px 14px #07ACE6;
   margin-bottom: 2em;
+  cursor: pointer;
+}
+.section-contact__form__button__style:hover {
+  transform: scale(1.1);
 }
 .section-contact__form__protection input[type=checkbox] {
   display: none;

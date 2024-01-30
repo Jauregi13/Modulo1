@@ -72,12 +72,13 @@ const modal = document.getElementById('modal');
 const modal_background = document.getElementById('modal-background');
 const close_modal = document.getElementById('close_modal');
 const button_newsletter = document.getElementById('submitNewsletter');
+const message_newsLetter = document.getElementById('message-newsletter');
 
 // Función para abrir el modal
 
 function openModal(){
 
-    if(sessionStorage.getItem("openModal") != "true"){
+    if(sessionStorage.getItem("openModal") !== "true"){
         sessionStorage.setItem("openModal","true");
         modal.classList.add('pop-up-modal--display');
     }
@@ -87,6 +88,9 @@ function openModal(){
 
 function closeModal(){
     modal.classList.remove('pop-up-modal--display');
+    message_newsLetter.classList.remove('pop-up-modal__content__form__message--error');
+    message_newsLetter.classList.remove('pop-up-modal__content__form__message--correct');
+    message_newsLetter.innerText = ''
 }
 
 // Función para enviar el newsletter
@@ -97,7 +101,7 @@ async function submitNewsletter(){
 
     let emailValid = emailRegex.test(email.value);
 
-    let message_error = document.getElementById('message_error');
+    
     
 
     if(emailValid){
@@ -119,19 +123,21 @@ async function submitNewsletter(){
 
         if(data.ok){
             email.value = '';
-            message_error.classList.remove('pop-up-modal__content__form__message-error--display');
-            closeModal();
+            message_newsLetter.classList.remove('pop-up-modal__content__form__message--error');
+            message_newsLetter.classList.add('pop-up-modal__content__form__message--correct');
+            message_newsLetter.innerText = 'It has been sent successfully';
+            setTimeout(closeModal,3000);
         }
         else {
             
-            message_error.classList.add('pop-up-modal__content__form__message-error--display');
-            message_error.innerText = "Error al enviar los datos al servidor";
+            message_newsLetter.classList.add('pop-up-modal__content__form__message--error');
+            message_newsLetter.innerText = "Error sending data to the server";
         }
     }
     else {
 
-        message_error.classList.add('pop-up-modal__content__form__message-error--display');
-        message_error.innerText = "El email que has introducido no es correcto";
+        message_newsLetter.classList.add('pop-up-modal__content__form__message--error');
+        message_newsLetter.innerText = "The email you have entered is not correct";
 
     }
 }
@@ -239,7 +245,7 @@ navbarItems.forEach((item) => {
 
 const button_form = document.getElementById('contact-form');
 
-const message = document.getElementById('message');
+const message_form = document.getElementById('message-form');
 
 // Función para validar el formulario
 
@@ -279,9 +285,9 @@ function validateForm(){
         sendFormInformation(name,email,checkbox);
     }
     else {
-        message.innerHTML = 'Algunos de los campos no es correcto';
-        message.classList.remove('section-contact__form__message--correct');
-        message.classList.add('section-contact__form__message--error');
+        message_form.innerText = 'Some of the fields are not correct';
+        message_form.classList.remove('section-contact__form__message--correct');
+        message_form.classList.add('section-contact__form__message--error');
     }
 
 }
@@ -311,19 +317,19 @@ async function sendFormInformation(name,email,checkbox){
             email.value = '';
             checkbox.checked = false;
 
-            message.innerHTML = 'La información se envió correctamente.'
-            message.classList.remove('section-contact__form__message--error');
-            message.classList.add('section-contact__form__message--correct');
+            message_form.innerHTML = 'The information was sent successfully'
+            message_form.classList.remove('section-contact__form__message--error');
+            message_form.classList.add('section-contact__form__message--correct');
 
             setTimeout(() => {
-                message.classList.remove('section-contact__form__message--correct');
-            },5000);
+                message_form.classList.remove('section-contact__form__message--correct');
+            },3000);
         }
 
         else {
-            message.innerHTML = 'La información no se pudo enviar. Error en el servidor.'
-            message.classList.remove('section-contact__form__message--error');
-            message.classList.add('section-contact__form__message--correct');
+            message_form.innerHTML = 'La información no se pudo enviar. Error en el servidor.'
+            message_form.classList.remove('section-contact__form__message--error');
+            message_form.classList.add('section-contact__form__message--correct');
         }
     }
 }
