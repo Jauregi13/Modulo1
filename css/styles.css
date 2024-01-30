@@ -210,11 +210,15 @@ body {
   border: 1px solid #08A6E4;
   box-shadow: 5px 10px 14px #07ACE6;
   margin-bottom: 51px;
+  cursor: pointer;
 }
 .section-introduction__button--text {
   font-size: 16px;
   font-family: "Open Sans";
   font-weight: 700;
+}
+.section-introduction__button:hover {
+  transform: scale(1.1);
 }
 
 .section2 {
