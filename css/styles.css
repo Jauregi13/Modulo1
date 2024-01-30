@@ -753,20 +753,26 @@ body {
   color: #55DFB4;
 }
 
-.button-return-top {
+.back-to-top {
+  text-align: end;
+}
+.back-to-top__button {
   background-color: #08A6E4;
   border: 1px solid #08A6E4;
   border-radius: 25px;
   height: 50px;
   width: 10%;
   margin-bottom: 5%;
-  margin-left: 5%;
+  margin-right: 4%;
+  cursor: pointer;
 }
-
-.button-return-top i {
+.back-to-top__button i {
   color: #FFFFFF;
   font-size: 20px;
   font-weight: 700;
+}
+.back-to-top__button:hover {
+  transform: scale(1.1);
 }
 
 .footer {
@@ -1021,10 +1027,10 @@ body {
   .section-contact__form__protection__text {
     width: 100%;
   }
-  .button-return-top {
+  .back-to-top__button {
     width: 7%;
   }
-  .button-return-top i {
+  .back-to-top__button i {
     font-size: 25px;
   }
   .footer__content {
