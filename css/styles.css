@@ -763,17 +763,21 @@ body {
 }
 
 .back-to-top {
-  text-align: end;
+  display: none;
 }
 .back-to-top__button {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
   background-color: #08A6E4;
   border: 1px solid #08A6E4;
   border-radius: 25px;
   height: 50px;
   width: 10%;
-  margin-bottom: 5%;
-  margin-right: 4%;
   cursor: pointer;
+}
+.back-to-top__button--move-top {
+  bottom: 120px;
 }
 .back-to-top__button i {
   color: #FFFFFF;
