@@ -42,7 +42,7 @@ function returnTop(){
 
     if(window.scrollY != 0){
 
-        window.scrollBy(0,-10);
+        window.scrollBy(0,-80);
 
         animationId = window.requestAnimationFrame(returnTop);
 
@@ -54,7 +54,7 @@ function returnTop(){
 }
 
 button_returnTop.addEventListener("click",function(){
-    setTimeout(returnTop,200);
+    returnTop()
 });
 
 
@@ -142,7 +142,7 @@ async function submitNewsletter(){
     }
 }
 
-// Abrir modal y barra de progreso del scroll
+// Abrir modal, barra de progreso del scroll y mostrar botón back to top
 
 window.addEventListener("scroll", function(){
 
@@ -157,6 +157,23 @@ window.addEventListener("scroll", function(){
     // Abre el modal
     if(scrollPercentage >= 25){
         openModal();
+    }
+
+    if(scrollPercentage >= 50){
+        
+        this.document.querySelector('.back-to-top').style.display = 'block'
+    }
+    else {
+        
+        this.document.querySelector('.back-to-top').style.display = 'none'
+    }
+
+    if(scrollPercentage >= 99){
+
+        this.document.querySelector('.back-to-top__button').classList.add('back-to-top__button--move-top')
+    }
+    else {
+        this.document.querySelector('.back-to-top__button').classList.remove('back-to-top__button--move-top')
     }
 });
 
