@@ -606,6 +606,7 @@ body {
   background-color: #95989A;
   z-index: 1;
   padding-bottom: 0.2em;
+  cursor: pointer;
 }
 .slider-container__next {
   right: 2%;
