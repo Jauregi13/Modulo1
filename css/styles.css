@@ -402,6 +402,12 @@ body {
 .section-prices {
   text-align: center;
 }
+.section-prices__title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 1em;
+}
 .section-prices__currency {
   margin: auto;
   margin-bottom: 4%;
@@ -424,18 +430,13 @@ body {
 .section-prices__currency__select option:checked {
   background-color: #08A6E4;
 }
-.section-prices__title {
-  text-align: center;
-  font-size: 36px;
-  line-height: 42px;
-  margin-bottom: 1em;
-}
 .section-prices__price1, .section-prices__price2, .section-prices__price3 {
   width: 75%;
   border-radius: 18px;
   margin: 0 auto;
   margin-bottom: 55px;
   transition: transform 0.1s;
+  cursor: pointer;
 }
 .section-prices__price1--red, .section-prices__price2--red, .section-prices__price3--red {
   border: 1px solid #FB3B64;
