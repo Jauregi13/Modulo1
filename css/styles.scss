@@ -508,6 +508,14 @@ body {
 .section-prices {
 
    text-align: center;
+   
+
+   &__title {
+      text-align: center;
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 1em;
+   }
 
    &__currency {
       margin: auto;
@@ -536,15 +544,6 @@ body {
       }
       
    }
-   
-   
-
-   &__title {
-      text-align: center;
-      font-size: 36px;
-      line-height: 42px;
-      margin-bottom: 1em;
-   }
 
    &__price1, &__price2, &__price3 {
       width: 75%;
@@ -552,6 +551,7 @@ body {
       margin: 0 auto;
       margin-bottom: 55px;
       transition: transform 0.1s;
+      cursor: pointer;
 
       &--red {
          border: 1px solid $red_color;
